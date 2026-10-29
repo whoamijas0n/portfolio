@@ -139,108 +139,377 @@
     <!-- Projects Section -->
     <section id="proyects" class="py-24 relative">
         <div class="container mx-auto px-6 max-w-6xl">
-            <h2 class="text-3xl md:text-5xl font-bold mb-8 text-center reveal">
+            <h2 class="text-3xl md:text-5xl font-bold mb-4 text-center reveal">
                 <span class="text-primary font-mono text-xl block mb-2">03.</span>
                 Proyectos Destacados
             </h2>
+            <p class="text-gray-400 text-center max-w-2xl mx-auto mb-10 text-sm md:text-base reveal">
+                Desarrollo de herramientas de <span class="text-white font-medium">ciberseguridad ofensiva</span>, soluciones de <span class="text-white font-medium">IoT & hardware embebido</span> e implementaciones avanzadas con <span class="text-white font-medium">IA y visión artificial</span>.
+            </p>
 
             <!-- Categoría Tabs -->
-            <div class="flex flex-wrap justify-center gap-4 mb-12 reveal">
-                <button onclick="filterProjects('all')" class="project-btn active px-6 py-2 rounded-full border border-gray-700 bg-transparent text-gray-400 hover:text-white hover:border-primary transition-all text-sm font-mono" data-filter="all">ALL</button>
-                <button onclick="filterProjects('security')" class="project-btn px-6 py-2 rounded-full border border-gray-700 bg-transparent text-gray-400 hover:text-white hover:border-primary transition-all text-sm font-mono" data-filter="security">SEC</button>
-                <button onclick="filterProjects('dev')" class="project-btn px-6 py-2 rounded-full border border-gray-700 bg-transparent text-gray-400 hover:text-white hover:border-primary transition-all text-sm font-mono" data-filter="dev">DEV</button>
-                <button onclick="filterProjects('hardware')" class="project-btn px-6 py-2 rounded-full border border-gray-700 bg-transparent text-gray-400 hover:text-white hover:border-primary transition-all text-sm font-mono" data-filter="hardware">IOT</button>
+            <div class="flex flex-wrap justify-center gap-3 md:gap-4 mb-14 reveal">
+                <button onclick="filterProjects('all')" class="project-btn active px-5 py-2.5 rounded-full border border-primary bg-primary text-white text-xs md:text-sm font-mono transition-all flex items-center gap-2 shadow-[0_0_15px_rgba(220,38,38,0.35)]" data-filter="all">
+                    <i class="fa-solid fa-layer-group"></i> Todos (6)
+                </button>
+                <button onclick="filterProjects('security')" class="project-btn px-5 py-2.5 rounded-full border border-gray-800 bg-black/40 text-gray-400 hover:text-white hover:border-primary transition-all text-xs md:text-sm font-mono flex items-center gap-2" data-filter="security">
+                    <i class="fa-solid fa-shield-halved"></i> Ciberseguridad (3)
+                </button>
+                <button onclick="filterProjects('hardware')" class="project-btn px-5 py-2.5 rounded-full border border-gray-800 bg-black/40 text-gray-400 hover:text-white hover:border-primary transition-all text-xs md:text-sm font-mono flex items-center gap-2" data-filter="hardware">
+                    <i class="fa-solid fa-microchip"></i> IoT & Hardware (3)
+                </button>
+                <button onclick="filterProjects('dev')" class="project-btn px-5 py-2.5 rounded-full border border-gray-800 bg-black/40 text-gray-400 hover:text-white hover:border-primary transition-all text-xs md:text-sm font-mono flex items-center gap-2" data-filter="dev">
+                    <i class="fa-solid fa-code"></i> Desarrollo & IA (3)
+                </button>
             </div>
 
             <!-- Grid de Proyectos -->
             <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 reveal">
                 
-                <!-- Project 1: ServoPipe (Actualizado) -->
-                <article class="glass rounded-xl overflow-hidden group hover:-translate-y-2 transition-transform duration-300 project-card hardware">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="img/servopipe.jpg" alt="ServoPipe" class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-primary/20 mix-blend-overlay"></div>
-                        <div class="absolute top-2 right-2 bg-yellow-500/90 text-black text-xs font-bold px-2 py-1 rounded">2º Lugar - FLIA UGB</div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">ServoPipe | Visión Artificial</h3>
-                            <div class="flex gap-3">
-                                <a href="https://github.com/whoamijas0n/ServoPipe.git" class="text-gray-400 hover:text-white"><i class="fa-brands fa-github text-lg"></i></a>
+                <!-- Project 1: DragonFly (Security) -->
+                <article class="glass-heavy rounded-2xl overflow-hidden group flex flex-col justify-between border border-gray-800/80 hover:border-primary/50 transition-all duration-300 project-card security">
+                    <div>
+                        <!-- Header / Imagen de Portada -->
+                        <div class="h-52 overflow-hidden relative bg-black/60 flex items-center justify-center p-4 border-b border-gray-800/60">
+                            <img src="img/projects/dragonfly-logo.png" alt="DragonFly System Logo" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-500 drop-shadow-[0_0_15px_rgba(220,38,38,0.3)]">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark-card via-transparent to-transparent pointer-events-none"></div>
+                            
+                            <!-- Badges Superiores -->
+                            <div class="absolute top-3 left-3">
+                                <span class="bg-black/80 backdrop-blur-md text-red-400 border border-red-500/30 text-xs px-3 py-1 rounded-full font-mono flex items-center gap-1.5 shadow-lg">
+                                    <i class="fa-solid fa-shield-halved text-[11px]"></i> Red Team
+                                </span>
+                            </div>
+                            <div class="absolute top-3 right-3">
+                                <span class="bg-red-500/20 text-red-300 border border-red-500/40 text-[11px] font-mono px-2.5 py-1 rounded-full backdrop-blur-md">
+                                    Toolbox Suite
+                                </span>
                             </div>
                         </div>
-                        <p class="text-gray-400 text-sm mb-4">Brazo robótico controlado por gestos en tiempo real. Implementación de lógica de precisión software/hardware.</p>
-                        <div class="flex flex-wrap gap-2 text-xs font-mono text-primary">
-                            <span>Python</span>
-                            <span>MediaPipe</span>
-                            <span>C++</span>
+
+                        <!-- Contenido -->
+                        <div class="p-6">
+                            <div class="mb-3">
+                                <span class="text-[11px] font-mono text-primary font-semibold tracking-wider uppercase block mb-1">Ciberseguridad Ofensiva</span>
+                                <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">DragonFly System</h3>
+                                <p class="text-xs font-mono text-gray-400 mt-0.5">Auditoría Inalámbrica, HID Attack & Network Offensive</p>
+                            </div>
+                            <p class="text-gray-300 text-sm leading-relaxed mb-5">
+                                Suite modular diseñada para operaciones de Red Team en entornos controlados. Automatiza reconocimiento de redes, captura de handshakes, ataques de inyección BadUSB/HID y manipulación de señales RF con soporte para SBC y microcontroladores.
+                            </p>
+                            
+                            <!-- Tecnologías -->
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="text-xs font-mono bg-white/5 border border-white/10 text-gray-300 px-2.5 py-1 rounded-md">Python</span>
+                                <span class="text-xs font-mono bg-white/5 border border-white/10 text-gray-300 px-2.5 py-1 rounded-md">Bash</span>
+                                <span class="text-xs font-mono bg-white/5 border border-white/10 text-gray-300 px-2.5 py-1 rounded-md">Linux</span>
+                                <span class="text-xs font-mono bg-white/5 border border-white/10 text-gray-300 px-2.5 py-1 rounded-md">Raspberry Pi</span>
+                                <span class="text-xs font-mono bg-white/5 border border-white/10 text-gray-300 px-2.5 py-1 rounded-md">ESP32</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Footer con Enlaces -->
+                    <div class="p-6 pt-0 mt-auto">
+                        <div class="border-t border-gray-800/80 pt-4 flex items-center justify-between">
+                            <a href="https://github.com/whoamijas0n/DragonFly" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 hover:bg-primary text-white border border-white/10 hover:border-primary text-xs font-mono font-medium transition-all duration-300 group/btn shadow-sm hover:shadow-[0_0_15px_rgba(220,38,38,0.4)]">
+                                <span>Ver Repositorio</span>
+                                <i class="fa-brands fa-github text-sm"></i>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-gray-400 group-hover/btn:text-white"></i>
+                            </a>
+                            <span class="text-[11px] font-mono text-gray-500 flex items-center gap-1.5">
+                                <i class="fa-solid fa-code-fork text-primary text-[10px]"></i> Open Source
+                            </span>
                         </div>
                     </div>
                 </article>
 
-                <!-- Project 2: FiExpress (Actualizado) -->
-                <article class="glass rounded-xl overflow-hidden group hover:-translate-y-2 transition-transform duration-300 project-card dev hardware">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="img/fiexpress.webp" alt="FiExpress" class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-primary/20 mix-blend-overlay"></div>
-                        <div class="absolute top-2 right-2 bg-orange-600/90 text-white text-xs font-bold px-2 py-1 rounded">3º Lugar - FLIA UGB</div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">FiExpress | IoT RFID</h3>
-                            <div class="flex gap-3">
-                                <a href="https://github.com/whoamijas0n/fiexpress.git" class="text-gray-400 hover:text-white"><i class="fa-brands fa-github text-lg"></i></a>
+                <!-- Project 2: Soranin (Security / Dev) -->
+                <article class="glass-heavy rounded-2xl overflow-hidden group flex flex-col justify-between border border-gray-800/80 hover:border-blue-500/50 transition-all duration-300 project-card security dev">
+                    <div>
+                        <!-- Header / Imagen de Portada -->
+                        <div class="h-52 overflow-hidden relative bg-black/60 flex items-center justify-center p-4 border-b border-gray-800/60">
+                            <img src="img/projects/soranin-logo.png" alt="Soranin OSINT Logo" class="max-h-full max-w-full object-contain group-hover:scale-105 transition-transform duration-500 drop-shadow-[0_0_15px_rgba(59,130,246,0.3)]">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark-card via-transparent to-transparent pointer-events-none"></div>
+                            
+                            <!-- Badges Superiores -->
+                            <div class="absolute top-3 left-3">
+                                <span class="bg-black/80 backdrop-blur-md text-blue-400 border border-blue-500/30 text-xs px-3 py-1 rounded-full font-mono flex items-center gap-1.5 shadow-lg">
+                                    <i class="fa-solid fa-eye text-[11px]"></i> OSINT
+                                </span>
+                            </div>
+                            <div class="absolute top-3 right-3">
+                                <span class="bg-blue-500/20 text-blue-300 border border-blue-500/40 text-[11px] font-mono px-2.5 py-1 rounded-full backdrop-blur-md">
+                                    Async Engine
+                                </span>
                             </div>
                         </div>
-                        <p class="text-gray-400 text-sm mb-4">Sistema de gestión de asistencia automatizado con RFID y generación de reportes en tiempo real.</p>
-                        <div class="flex flex-wrap gap-2 text-xs font-mono text-primary">
-                            <span>C#</span>
-                            <span>SQL Server</span>
-                            <span>ESP32</span>
+
+                        <!-- Contenido -->
+                        <div class="p-6">
+                            <div class="mb-3">
+                                <span class="text-[11px] font-mono text-blue-400 font-semibold tracking-wider uppercase block mb-1">Ciberinteligencia & Recon</span>
+                                <h3 class="text-xl font-bold text-white group-hover:text-blue-400 transition-colors">Soranin</h3>
+                                <p class="text-xs font-mono text-gray-400 mt-0.5">Rastreo de Identidades & Data Breach Hunting</p>
+                            </div>
+                            <p class="text-gray-300 text-sm leading-relaxed mb-5">
+                                Framework avanzado de Inteligencia de Fuentes Abiertas (OSINT) diseñado para automatizar investigaciones digitales asíncronas sobre correos y números telefónicos. Rastreo en bases de datos públicas, huella digital y detección de filtraciones de datos.
+                            </p>
+                            
+                            <!-- Tecnologías -->
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="text-xs font-mono bg-white/5 border border-white/10 text-gray-300 px-2.5 py-1 rounded-md">Python</span>
+                                <span class="text-xs font-mono bg-white/5 border border-white/10 text-gray-300 px-2.5 py-1 rounded-md">AsyncIO</span>
+                                <span class="text-xs font-mono bg-white/5 border border-white/10 text-gray-300 px-2.5 py-1 rounded-md">Aiohttp</span>
+                                <span class="text-xs font-mono bg-white/5 border border-white/10 text-gray-300 px-2.5 py-1 rounded-md">OSINT</span>
+                                <span class="text-xs font-mono bg-white/5 border border-white/10 text-gray-300 px-2.5 py-1 rounded-md">Breach Hunting</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Footer con Enlaces -->
+                    <div class="p-6 pt-0 mt-auto">
+                        <div class="border-t border-gray-800/80 pt-4 flex items-center justify-between">
+                            <a href="https://github.com/whoamijas0n/Soranin" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 hover:bg-blue-600 text-white border border-white/10 hover:border-blue-600 text-xs font-mono font-medium transition-all duration-300 group/btn shadow-sm hover:shadow-[0_0_15px_rgba(59,130,246,0.4)]">
+                                <span>Ver Repositorio</span>
+                                <i class="fa-brands fa-github text-sm"></i>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-gray-400 group-hover/btn:text-white"></i>
+                            </a>
+                            <span class="text-[11px] font-mono text-gray-500 flex items-center gap-1.5">
+                                <i class="fa-solid fa-code-fork text-blue-400 text-[10px]"></i> Open Source
+                            </span>
                         </div>
                     </div>
                 </article>
 
-                <!-- Project 3: Nethack -->
-                <article class="glass rounded-xl overflow-hidden group hover:-translate-y-2 transition-transform duration-300 project-card security">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="img/nethack.webp" alt="Nethack" class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-primary/20 mix-blend-overlay"></div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Nethack</h3>
-                            <div class="flex gap-3">
-                                <a href="https://github.com/whoamijas0n/nethack.git" class="text-gray-400 hover:text-white"><i class="fa-brands fa-github text-lg"></i></a>
+                <!-- Project 3: REI (IoT / Hardware / Security) -->
+                <article class="glass-heavy rounded-2xl overflow-hidden group flex flex-col justify-between border border-gray-800/80 hover:border-cyan-500/50 transition-all duration-300 project-card hardware security">
+                    <div>
+                        <!-- Header / Imagen de Portada -->
+                        <div class="h-52 overflow-hidden relative bg-black/60 border-b border-gray-800/60">
+                            <img src="img/projects/rei.jpg" alt="REI Hardware Diagnostic Hub" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark-card via-transparent to-transparent pointer-events-none"></div>
+                            
+                            <!-- Badges Superiores -->
+                            <div class="absolute top-3 left-3">
+                                <span class="bg-black/80 backdrop-blur-md text-cyan-400 border border-cyan-500/30 text-xs px-3 py-1 rounded-full font-mono flex items-center gap-1.5 shadow-lg">
+                                    <i class="fa-solid fa-microchip text-[11px]"></i> Hardware Hub
+                                </span>
+                            </div>
+                            <div class="absolute top-3 right-3">
+                                <span class="bg-cyan-500/20 text-cyan-300 border border-cyan-500/40 text-[11px] font-mono px-2.5 py-1 rounded-full backdrop-blur-md">
+                                    RPi Zero 2W
+                                </span>
                             </div>
                         </div>
-                        <p class="text-gray-400 text-sm mb-4">Suite de auditoría para redes WiFi. Automatiza captura de handshakes, ataques de diccionario y evil twin.</p>
-                        <div class="flex flex-wrap gap-2 text-xs font-mono text-primary">
-                            <span>Bash</span>
-                            <span>Aircrack-ng</span>
-                            <span>Hashcat</span>
+
+                        <!-- Contenido -->
+                        <div class="p-6">
+                            <div class="mb-3">
+                                <span class="text-[11px] font-mono text-cyan-400 font-semibold tracking-wider uppercase block mb-1">Diagnóstico Embebido</span>
+                                <h3 class="text-xl font-bold text-white group-hover:text-cyan-400 transition-colors">REI Hub</h3>
+                                <p class="text-xs font-mono text-gray-400 mt-0.5">Portable Multi-Interface Diagnostic Hub</p>
+                            </div>
+                            <p class="text-gray-300 text-sm leading-relaxed mb-5">
+                                Dispositivo autónomo de campo para diagnóstico de infraestructura TI y endpoints basado en Raspberry Pi Zero 2 W y pantalla OLED SH1106 de 1.3". UI asíncrona fija a 30 FPS, teclado virtual operado por joystick de 5 vías y suite de plugins modulares de red.
+                            </p>
+                            
+                            <!-- Tecnologías -->
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="text-xs font-mono bg-white/5 border border-white/10 text-gray-300 px-2.5 py-1 rounded-md">Raspberry Pi</span>
+                                <span class="text-xs font-mono bg-white/5 border border-white/10 text-gray-300 px-2.5 py-1 rounded-md">Python</span>
+                                <span class="text-xs font-mono bg-white/5 border border-white/10 text-gray-300 px-2.5 py-1 rounded-md">OLED SPI/I2C</span>
+                                <span class="text-xs font-mono bg-white/5 border border-white/10 text-gray-300 px-2.5 py-1 rounded-md">GPIO</span>
+                                <span class="text-xs font-mono bg-white/5 border border-white/10 text-gray-300 px-2.5 py-1 rounded-md">Redes TI</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Footer con Enlaces -->
+                    <div class="p-6 pt-0 mt-auto">
+                        <div class="border-t border-gray-800/80 pt-4 flex items-center justify-between">
+                            <a href="https://github.com/whoamijas0n/rei" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 hover:bg-cyan-600 text-white border border-white/10 hover:border-cyan-600 text-xs font-mono font-medium transition-all duration-300 group/btn shadow-sm hover:shadow-[0_0_15px_rgba(6,182,212,0.4)]">
+                                <span>Ver Repositorio</span>
+                                <i class="fa-brands fa-github text-sm"></i>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-gray-400 group-hover/btn:text-white"></i>
+                            </a>
+                            <span class="text-[11px] font-mono text-gray-500 flex items-center gap-1.5">
+                                <i class="fa-solid fa-code-fork text-cyan-400 text-[10px]"></i> Open Source
+                            </span>
                         </div>
                     </div>
                 </article>
 
-                <!-- Project 4: Nmap Manager -->
-                <article class="glass rounded-xl overflow-hidden group hover:-translate-y-2 transition-transform duration-300 project-card security">
-                    <div class="h-48 overflow-hidden relative">
-                        <img src="img/nmap.png" alt="Nmap" class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500">
-                        <div class="absolute inset-0 bg-primary/20 mix-blend-overlay"></div>
-                    </div>
-                    <div class="p-6">
-                        <div class="flex justify-between items-start mb-4">
-                            <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Nmap Manager</h3>
-                            <div class="flex gap-3">
-                                <a href="https://github.com/whoamijas0n/nmap_manager.git" class="text-gray-400 hover:text-white"><i class="fa-brands fa-github text-lg"></i></a>
+                <!-- Project 4: ServoPipe (IoT / Hardware / Dev) -->
+                <article class="glass-heavy rounded-2xl overflow-hidden group flex flex-col justify-between border border-gray-800/80 hover:border-yellow-500/50 transition-all duration-300 project-card hardware dev">
+                    <div>
+                        <!-- Header / Imagen de Portada -->
+                        <div class="h-52 overflow-hidden relative bg-black/60 border-b border-gray-800/60">
+                            <img src="img/servopipe.jpg" alt="ServoPipe Brazo Robótico" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark-card via-transparent to-transparent pointer-events-none"></div>
+                            
+                            <!-- Badges Superiores -->
+                            <div class="absolute top-3 left-3">
+                                <span class="bg-black/80 backdrop-blur-md text-yellow-400 border border-yellow-500/30 text-xs px-3 py-1 rounded-full font-mono flex items-center gap-1.5 shadow-lg">
+                                    <i class="fa-solid fa-robot text-[11px]"></i> Robótica IoT
+                                </span>
+                            </div>
+                            <div class="absolute top-3 right-3">
+                                <span class="bg-yellow-500/90 text-black text-xs font-bold px-2.5 py-1 rounded-full font-mono shadow-md flex items-center gap-1">
+                                    <i class="fa-solid fa-trophy"></i> 2º Lugar FLIA
+                                </span>
                             </div>
                         </div>
-                        <p class="text-gray-400 text-sm mb-4">Automatización de escaneos de red con Nmap para recolección eficiente de información.</p>
-                        <div class="flex flex-wrap gap-2 text-xs font-mono text-primary">
-                            <span>Bash</span>
-                            <span>Nmap</span>
-                            <span>Recon</span>
+
+                        <!-- Contenido -->
+                        <div class="p-6">
+                            <div class="mb-3">
+                                <span class="text-[11px] font-mono text-yellow-400 font-semibold tracking-wider uppercase block mb-1">Visión por Computadora & Robótica</span>
+                                <h3 class="text-xl font-bold text-white group-hover:text-yellow-400 transition-colors">ServoPipe</h3>
+                                <p class="text-xs font-mono text-gray-400 mt-0.5">Control de Servomotores por Gestos en Tiempo Real</p>
+                            </div>
+                            <p class="text-gray-300 text-sm leading-relaxed mb-5">
+                                Sistema robótico de control gestual para mecanismos articulados. Implementa visión artificial con MediaPipe para rastreo cinemático de manos y comunicación serial/inalámbrica de ultrabaja latencia hacia un ESP32 que comanda los servomotores.
+                            </p>
+                            
+                            <!-- Tecnologías -->
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="text-xs font-mono bg-white/5 border border-white/10 text-gray-300 px-2.5 py-1 rounded-md">Python</span>
+                                <span class="text-xs font-mono bg-white/5 border border-white/10 text-gray-300 px-2.5 py-1 rounded-md">MediaPipe</span>
+                                <span class="text-xs font-mono bg-white/5 border border-white/10 text-gray-300 px-2.5 py-1 rounded-md">OpenCV</span>
+                                <span class="text-xs font-mono bg-white/5 border border-white/10 text-gray-300 px-2.5 py-1 rounded-md">ESP32</span>
+                                <span class="text-xs font-mono bg-white/5 border border-white/10 text-gray-300 px-2.5 py-1 rounded-md">C++</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Footer con Enlaces -->
+                    <div class="p-6 pt-0 mt-auto">
+                        <div class="border-t border-gray-800/80 pt-4 flex items-center justify-between">
+                            <a href="https://github.com/whoamijas0n/ServoPipe.git" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 hover:bg-yellow-600 text-white border border-white/10 hover:border-yellow-600 text-xs font-mono font-medium transition-all duration-300 group/btn shadow-sm hover:shadow-[0_0_15px_rgba(234,179,8,0.4)]">
+                                <span>Ver Repositorio</span>
+                                <i class="fa-brands fa-github text-sm"></i>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-gray-400 group-hover/btn:text-white"></i>
+                            </a>
+                            <span class="text-[11px] font-mono text-gray-500 flex items-center gap-1.5">
+                                <i class="fa-solid fa-award text-yellow-400 text-[10px]"></i> FLIA UGB
+                            </span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 5: FiExpress (IoT / Dev) -->
+                <article class="glass-heavy rounded-2xl overflow-hidden group flex flex-col justify-between border border-gray-800/80 hover:border-orange-500/50 transition-all duration-300 project-card hardware dev">
+                    <div>
+                        <!-- Header / Imagen de Portada -->
+                        <div class="h-52 overflow-hidden relative bg-black/60 border-b border-gray-800/60">
+                            <img src="img/fiexpress.webp" alt="FiExpress Sistema RFID" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark-card via-transparent to-transparent pointer-events-none"></div>
+                            
+                            <!-- Badges Superiores -->
+                            <div class="absolute top-3 left-3">
+                                <span class="bg-black/80 backdrop-blur-md text-orange-400 border border-orange-500/30 text-xs px-3 py-1 rounded-full font-mono flex items-center gap-1.5 shadow-lg">
+                                    <i class="fa-solid fa-id-card-clip text-[11px]"></i> IoT RFID
+                                </span>
+                            </div>
+                            <div class="absolute top-3 right-3">
+                                <span class="bg-orange-600/90 text-white text-xs font-bold px-2.5 py-1 rounded-full font-mono shadow-md flex items-center gap-1">
+                                    <i class="fa-solid fa-trophy"></i> 3º Lugar FLIA
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Contenido -->
+                        <div class="p-6">
+                            <div class="mb-3">
+                                <span class="text-[11px] font-mono text-orange-400 font-semibold tracking-wider uppercase block mb-1">Software Empresarial & IoT</span>
+                                <h3 class="text-xl font-bold text-white group-hover:text-orange-400 transition-colors">FiExpress</h3>
+                                <p class="text-xs font-mono text-gray-400 mt-0.5">Control Integral de Asistencia y Fichajes con RFID</p>
+                            </div>
+                            <p class="text-gray-300 text-sm leading-relaxed mb-5">
+                                Solución completa de control de asistencia laboral que combina hardware lector RFID con un panel web administrativo. Ofrece estadísticas en tiempo real, gestión de incidencias, trazabilidad horaria y notificaciones de seguridad vía Telegram.
+                            </p>
+                            
+                            <!-- Tecnologías -->
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="text-xs font-mono bg-white/5 border border-white/10 text-gray-300 px-2.5 py-1 rounded-md">C# / .NET</span>
+                                <span class="text-xs font-mono bg-white/5 border border-white/10 text-gray-300 px-2.5 py-1 rounded-md">SQL Server</span>
+                                <span class="text-xs font-mono bg-white/5 border border-white/10 text-gray-300 px-2.5 py-1 rounded-md">ESP32</span>
+                                <span class="text-xs font-mono bg-white/5 border border-white/10 text-gray-300 px-2.5 py-1 rounded-md">RFID</span>
+                                <span class="text-xs font-mono bg-white/5 border border-white/10 text-gray-300 px-2.5 py-1 rounded-md">Telegram API</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Footer con Enlaces -->
+                    <div class="p-6 pt-0 mt-auto">
+                        <div class="border-t border-gray-800/80 pt-4 flex items-center justify-between">
+                            <a href="https://github.com/whoamijas0n/fiexpress.git" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 hover:bg-orange-600 text-white border border-white/10 hover:border-orange-600 text-xs font-mono font-medium transition-all duration-300 group/btn shadow-sm hover:shadow-[0_0_15px_rgba(234,88,12,0.4)]">
+                                <span>Ver Repositorio</span>
+                                <i class="fa-brands fa-github text-sm"></i>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-gray-400 group-hover/btn:text-white"></i>
+                            </a>
+                            <span class="text-[11px] font-mono text-gray-500 flex items-center gap-1.5">
+                                <i class="fa-solid fa-award text-orange-400 text-[10px]"></i> FLIA UGB
+                            </span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 6: HandTalk (Dev / AI) -->
+                <article class="glass-heavy rounded-2xl overflow-hidden group flex flex-col justify-between border border-gray-800/80 hover:border-purple-500/50 transition-all duration-300 project-card dev">
+                    <div>
+                        <!-- Header / Imagen de Portada -->
+                        <div class="h-52 overflow-hidden relative bg-black/60 border-b border-gray-800/60">
+                            <img src="img/projects/handtalk.jpg" alt="HandTalk Traductor de Lengua de Señas" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                            <div class="absolute inset-0 bg-gradient-to-t from-dark-card via-transparent to-transparent pointer-events-none"></div>
+                            
+                            <!-- Badges Superiores -->
+                            <div class="absolute top-3 left-3">
+                                <span class="bg-black/80 backdrop-blur-md text-purple-400 border border-purple-500/30 text-xs px-3 py-1 rounded-full font-mono flex items-center gap-1.5 shadow-lg">
+                                    <i class="fa-solid fa-hands-asl-interpreting text-[11px]"></i> IA & CV
+                                </span>
+                            </div>
+                            <div class="absolute top-3 right-3">
+                                <span class="bg-purple-500/20 text-purple-300 border border-purple-500/40 text-[11px] font-mono px-2.5 py-1 rounded-full backdrop-blur-md">
+                                    Colaborativo
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Contenido -->
+                        <div class="p-6">
+                            <div class="mb-3">
+                                <span class="text-[11px] font-mono text-purple-400 font-semibold tracking-wider uppercase block mb-1">Visión Artificial & Machine Learning</span>
+                                <h3 class="text-xl font-bold text-white group-hover:text-purple-400 transition-colors">HandTalk</h3>
+                                <p class="text-xs font-mono text-gray-400 mt-0.5">Captura y Detección de Lengua de Señas en Tiempo Real</p>
+                            </div>
+                            <p class="text-gray-300 text-sm leading-relaxed mb-5">
+                                Sistema de accesibilidad para captura, entrenamiento y reconocimiento de gestos de lengua de señas en tiempo real vía webcam. Extrae coordenadas anatómicas de las manos mediante visión artificial y clasifica gestos con modelos de Machine Learning.
+                            </p>
+                            
+                            <!-- Tecnologías -->
+                            <div class="flex flex-wrap gap-2 mb-2">
+                                <span class="text-xs font-mono bg-white/5 border border-white/10 text-gray-300 px-2.5 py-1 rounded-md">Python</span>
+                                <span class="text-xs font-mono bg-white/5 border border-white/10 text-gray-300 px-2.5 py-1 rounded-md">OpenCV</span>
+                                <span class="text-xs font-mono bg-white/5 border border-white/10 text-gray-300 px-2.5 py-1 rounded-md">MediaPipe</span>
+                                <span class="text-xs font-mono bg-white/5 border border-white/10 text-gray-300 px-2.5 py-1 rounded-md">Machine Learning</span>
+                                <span class="text-xs font-mono bg-white/5 border border-white/10 text-gray-300 px-2.5 py-1 rounded-md">IA Inclusiva</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Footer con Enlaces -->
+                    <div class="p-6 pt-0 mt-auto">
+                        <div class="border-t border-gray-800/80 pt-4 flex items-center justify-between">
+                            <a href="https://github.com/Shadow026/HandTalk.git" target="_blank" rel="noopener noreferrer" class="inline-flex items-center gap-2 px-4 py-2 rounded-xl bg-white/5 hover:bg-purple-600 text-white border border-white/10 hover:border-purple-600 text-xs font-mono font-medium transition-all duration-300 group/btn shadow-sm hover:shadow-[0_0_15px_rgba(168,85,247,0.4)]">
+                                <span>Ver Repositorio</span>
+                                <i class="fa-brands fa-github text-sm"></i>
+                                <i class="fa-solid fa-arrow-up-right-from-square text-[10px] text-gray-400 group-hover/btn:text-white"></i>
+                            </a>
+                            <span class="text-[11px] font-mono text-gray-500 flex items-center gap-1.5">
+                                <i class="fa-solid fa-users text-purple-400 text-[10px]"></i> Open Source
+                            </span>
                         </div>
                     </div>
                 </article>

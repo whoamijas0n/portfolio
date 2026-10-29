@@ -160,18 +160,18 @@ window.resetTilt = resetTilt;
 function filterProjects(category) {
     document.querySelectorAll('.project-btn').forEach(btn => {
         if (btn.dataset.filter === category) {
-            btn.classList.add('bg-primary', 'text-white', 'border-primary');
-            btn.classList.remove('text-gray-400', 'bg-transparent');
+            btn.classList.add('bg-primary', 'text-white', 'border-primary', 'shadow-[0_0_15px_rgba(220,38,38,0.35)]');
+            btn.classList.remove('text-gray-400', 'bg-black/40', 'border-gray-800');
         } else {
-            btn.classList.remove('bg-primary', 'text-white', 'border-primary');
-            btn.classList.add('text-gray-400', 'bg-transparent');
+            btn.classList.remove('bg-primary', 'text-white', 'border-primary', 'shadow-[0_0_15px_rgba(220,38,38,0.35)]');
+            btn.classList.add('text-gray-400', 'bg-black/40', 'border-gray-800');
         }
     });
 
     const cards = document.querySelectorAll('.project-card');
     cards.forEach(card => {
         if (category === 'all' || card.classList.contains(category)) {
-            card.style.display = 'block';
+            card.style.display = 'flex';
             setTimeout(() => {
                 card.style.opacity = '1';
                 card.style.transform = 'translateY(0)';
