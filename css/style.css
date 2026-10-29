@@ -128,3 +128,37 @@ body {
 .group:hover .animate-infinite-scroll {
     animation-play-state: paused;
 }
+
+/* Efectos de Insignias y Certificaciones */
+.badge-glow-red {
+    filter: drop-shadow(0 0 18px rgba(220, 38, 38, 0.45));
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+.badge-glow-red:hover {
+    filter: drop-shadow(0 0 26px rgba(220, 38, 38, 0.7));
+    transform: scale(1.04);
+}
+
+.badge-glow-blue {
+    filter: drop-shadow(0 0 18px rgba(59, 130, 246, 0.45));
+    transition: filter 0.3s ease, transform 0.3s ease;
+}
+.badge-glow-blue:hover {
+    filter: drop-shadow(0 0 26px rgba(59, 130, 246, 0.7));
+    transform: scale(1.04);
+}
+
+.subcourse-card {
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.subcourse-card:hover {
+    transform: translateY(-4px);
+    border-color: rgba(220, 38, 38, 0.5);
+    background: rgba(25, 25, 25, 0.85);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 0 15px rgba(220, 38, 38, 0.15);
+}
+.subcourse-card-blue:hover {
+    border-color: rgba(59, 130, 246, 0.5);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5), 0 0 15px rgba(59, 130, 246, 0.15);
+}
+
