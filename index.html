@@ -1,0 +1,648 @@
+<!DOCTYPE html>
+<html lang="es" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jason Caballero | Ingeniería y Ciberseguridad</title>
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <link rel="icon" href="img/logo.webp" type="image/x-icon">
+
+    <!-- FontAwesome & Devicon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configuración Tailwind Personalizada -->
+    <script src="js/tailwind.config.js"></script>
+
+    <!-- Estilos Personalizados -->
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="selection:bg-primary selection:text-white">
+
+    <!-- Canvas Animation Background -->
+    <canvas id="canvas-bg"></canvas>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+        <!-- Decoración de fondo -->
+        <div class="absolute top-1/4 -left-20 w-96 h-96 bg-primary/20 rounded-full blur-[120px] animate-pulse-slow"></div>
+        <div class="absolute bottom-1/4 -right-20 w-96 h-96 bg-blue-900/10 rounded-full blur-[120px] animate-pulse-slow" style="animation-delay: 2s;"></div>
+
+        <div class="container mx-auto px-6 relative z-10 text-center">
+            
+            <h1 class="text-5xl md:text-7xl lg:text-8xl font-bold mb-6 tracking-tight leading-tight">
+                Jason <span class="text-gradient-red">Caballero</span>
+            </h1>
+            
+            <div class="h-8 md:h-12 mb-8">
+                <span id="typewriter" class="text-xl md:text-3xl font-mono text-gray-400 border-r-2 border-primary pr-2"></span>
+            </div>
+
+            <p class="max-w-3xl mx-auto text-gray-400 text-lg mb-10 leading-relaxed">
+                Estudiante de Ingeniería en Sistemas y Redes Informáticas con formación sólida en <span class="text-white font-semibold">ciberseguridad</span>, infraestructura TI y desarrollo de software empresarial.
+            </p>
+
+            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center">
+                <a href="#proyects" class="px-8 py-3 bg-primary text-white rounded-full font-semibold hover:bg-red-700 transition-all shadow-[0_0_20px_rgba(220,38,38,0.4)] hover:shadow-[0_0_30px_rgba(220,38,38,0.6)] hover:-translate-y-1">
+                    Ver Proyectos <i class="fa-solid fa-arrow-right ml-2"></i>
+                </a>
+                <a href="files/cv-jason-caballero.pdf" download class="group px-8 py-3 border border-gray-600 rounded-full font-semibold hover:border-white transition-all hover:bg-white hover:text-black">
+                    Descargar CV <i class="fa-solid fa-download ml-2 group-hover:animate-bounce"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Me Section -->
+    <section id="about" class="py-24 relative">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <h2 class="text-3xl md:text-5xl font-bold mb-16 text-center reveal">
+                <span class="text-primary font-mono text-xl block mb-2">01.</span>
+                Perfil Profesional
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-12 items-center reveal">
+                <!-- Imagen -->
+                <div class="relative group mx-auto md:mx-0 max-w-sm">
+                    <div class="absolute -inset-4 bg-gradient-to-r from-primary to-gray-900 rounded-xl opacity-30 group-hover:opacity-60 blur-lg transition duration-500"></div>
+                    <div class="relative rounded-xl overflow-hidden border border-gray-800 bg-dark-card">
+                        <img src="img/jason.webp" alt="Jason Caballero" class="w-full h-auto object-cover grayscale hover:grayscale-0 transition-all duration-500 transform group-hover:scale-105">
+                        <div class="absolute bottom-0 left-0 w-full p-4 bg-gradient-to-t from-black to-transparent opacity-90">
+                            <div class="font-mono text-xs text-primary">
+                                > user.location = "Usulután, SV"<br>
+                                "Buscando soluciones eficientes"
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Texto -->
+                <div class="space-y-6">
+                    <h3 class="text-2xl font-bold text-white">Pasión por la seguridad y la infraestructura.</h3>
+                    <div class="h-1 w-20 bg-primary rounded"></div>
+                    <p class="text-gray-400 leading-relaxed text-lg">
+                        Poseo experiencia técnica en el mantenimiento y optimización de infraestructura tecnológica, así como en la creación de herramientas de scripting para auditoría de redes y detección de vulnerabilidades.
+                    </p>
+                    <p class="text-gray-400 leading-relaxed text-lg">
+                        Me distingue una fuerte pasión por la seguridad informática y una búsqueda constante de soluciones eficientes en entornos de red.
+                    </p>
+                    
+                    <ul class="grid grid-cols-2 gap-4 mt-6 font-mono text-sm text-gray-300">
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-server text-primary"></i> Infraestructura TI</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-shield-halved text-primary"></i> Ciberseguridad</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-code text-primary"></i> Python/C++/C#</li>
+                        <li class="flex items-center gap-2"><i class="fa-solid fa-microchip text-primary"></i> Hardware & IoT</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section (NUEVA SECCIÓN DEL CV) -->
+    <section id="experience" class="py-12 relative bg-dark-card/30">
+        <div class="container mx-auto px-6 max-w-5xl">
+            <h2 class="text-3xl md:text-5xl font-bold mb-12 text-center reveal">
+                <span class="text-primary font-mono text-xl block mb-2">02.</span>
+                Experiencia Laboral
+            </h2>
+            
+            <div class="reveal">
+                <!-- Timeline Item -->
+                <div class="glass p-8 rounded-2xl border-l-4 border-l-primary hover:bg-dark-card/80 transition-all">
+                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-4">
+                        <div>
+                            <h3 class="text-2xl font-bold text-white">Soporte Técnico en Infraestructura Tecnológica</h3>
+                            <p class="text-primary font-mono text-lg mt-1">Freelance</p>
+                        </div>
+                        <div class="mt-2 md:mt-0 px-4 py-1 rounded-full bg-white/5 border border-white/10 text-sm font-mono text-gray-300">
+                            Feb 2024 -- Ene 2025
+                        </div>
+                    </div>
+                    
+                    <ul class="space-y-3 text-gray-400 mt-6 list-disc list-inside marker:text-primary">
+                        <li>Reparación y mantenimiento preventivo/correctivo de equipos de cómputo y dispositivos electrónicos.</li>
+                        <li>Soporte técnico especializado y configuración de sistemas operativos Windows y Linux (distribuciones basadas en Arch y Debian).</li>
+                        <li>Resolución de incidencias técnicas críticas de forma presencial y remota.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="proyects" class="py-24 relative">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <h2 class="text-3xl md:text-5xl font-bold mb-8 text-center reveal">
+                <span class="text-primary font-mono text-xl block mb-2">03.</span>
+                Proyectos Destacados
+            </h2>
+
+            <!-- Categoría Tabs -->
+            <div class="flex flex-wrap justify-center gap-4 mb-12 reveal">
+                <button onclick="filterProjects('all')" class="project-btn active px-6 py-2 rounded-full border border-gray-700 bg-transparent text-gray-400 hover:text-white hover:border-primary transition-all text-sm font-mono" data-filter="all">ALL</button>
+                <button onclick="filterProjects('security')" class="project-btn px-6 py-2 rounded-full border border-gray-700 bg-transparent text-gray-400 hover:text-white hover:border-primary transition-all text-sm font-mono" data-filter="security">SEC</button>
+                <button onclick="filterProjects('dev')" class="project-btn px-6 py-2 rounded-full border border-gray-700 bg-transparent text-gray-400 hover:text-white hover:border-primary transition-all text-sm font-mono" data-filter="dev">DEV</button>
+                <button onclick="filterProjects('hardware')" class="project-btn px-6 py-2 rounded-full border border-gray-700 bg-transparent text-gray-400 hover:text-white hover:border-primary transition-all text-sm font-mono" data-filter="hardware">IOT</button>
+            </div>
+
+            <!-- Grid de Proyectos -->
+            <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 reveal">
+                
+                <!-- Project 1: ServoPipe (Actualizado) -->
+                <article class="glass rounded-xl overflow-hidden group hover:-translate-y-2 transition-transform duration-300 project-card hardware">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="img/servopipe.jpg" alt="ServoPipe" class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-primary/20 mix-blend-overlay"></div>
+                        <div class="absolute top-2 right-2 bg-yellow-500/90 text-black text-xs font-bold px-2 py-1 rounded">2º Lugar - FLIA UGB</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">ServoPipe | Visión Artificial</h3>
+                            <div class="flex gap-3">
+                                <a href="https://github.com/whoamijas0n/ServoPipe.git" class="text-gray-400 hover:text-white"><i class="fa-brands fa-github text-lg"></i></a>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-4">Brazo robótico controlado por gestos en tiempo real. Implementación de lógica de precisión software/hardware.</p>
+                        <div class="flex flex-wrap gap-2 text-xs font-mono text-primary">
+                            <span>Python</span>
+                            <span>MediaPipe</span>
+                            <span>C++</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2: FiExpress (Actualizado) -->
+                <article class="glass rounded-xl overflow-hidden group hover:-translate-y-2 transition-transform duration-300 project-card dev hardware">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="img/fiexpress.webp" alt="FiExpress" class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-primary/20 mix-blend-overlay"></div>
+                        <div class="absolute top-2 right-2 bg-orange-600/90 text-white text-xs font-bold px-2 py-1 rounded">3º Lugar - FLIA UGB</div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">FiExpress | IoT RFID</h3>
+                            <div class="flex gap-3">
+                                <a href="https://github.com/whoamijas0n/fiexpress.git" class="text-gray-400 hover:text-white"><i class="fa-brands fa-github text-lg"></i></a>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-4">Sistema de gestión de asistencia automatizado con RFID y generación de reportes en tiempo real.</p>
+                        <div class="flex flex-wrap gap-2 text-xs font-mono text-primary">
+                            <span>C#</span>
+                            <span>SQL Server</span>
+                            <span>ESP32</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3: Nethack -->
+                <article class="glass rounded-xl overflow-hidden group hover:-translate-y-2 transition-transform duration-300 project-card security">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="img/nethack.webp" alt="Nethack" class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-primary/20 mix-blend-overlay"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Nethack</h3>
+                            <div class="flex gap-3">
+                                <a href="https://github.com/whoamijas0n/nethack.git" class="text-gray-400 hover:text-white"><i class="fa-brands fa-github text-lg"></i></a>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-4">Suite de auditoría para redes WiFi. Automatiza captura de handshakes, ataques de diccionario y evil twin.</p>
+                        <div class="flex flex-wrap gap-2 text-xs font-mono text-primary">
+                            <span>Bash</span>
+                            <span>Aircrack-ng</span>
+                            <span>Hashcat</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 4: Nmap Manager -->
+                <article class="glass rounded-xl overflow-hidden group hover:-translate-y-2 transition-transform duration-300 project-card security">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="img/nmap.png" alt="Nmap" class="w-full h-full object-cover opacity-80 group-hover:scale-110 transition-transform duration-500">
+                        <div class="absolute inset-0 bg-primary/20 mix-blend-overlay"></div>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex justify-between items-start mb-4">
+                            <h3 class="text-xl font-bold text-white group-hover:text-primary transition-colors">Nmap Manager</h3>
+                            <div class="flex gap-3">
+                                <a href="https://github.com/whoamijas0n/nmap_manager.git" class="text-gray-400 hover:text-white"><i class="fa-brands fa-github text-lg"></i></a>
+                            </div>
+                        </div>
+                        <p class="text-gray-400 text-sm mb-4">Automatización de escaneos de red con Nmap para recolección eficiente de información.</p>
+                        <div class="flex flex-wrap gap-2 text-xs font-mono text-primary">
+                            <span>Bash</span>
+                            <span>Nmap</span>
+                            <span>Recon</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-24 relative overflow-hidden">
+        <div class="absolute right-0 top-1/2 w-64 h-64 bg-primary/10 rounded-full blur-[80px]"></div>
+
+        <div class="container mx-auto px-6 max-w-7xl relative z-10">
+            <h2 class="text-3xl md:text-5xl font-bold mb-16 text-center reveal">
+                <span class="text-primary font-mono text-xl block mb-2">04.</span>
+                Arsenal Técnico
+            </h2>
+
+            <!-- 3D CARDS -->
+            <div class="grid md:grid-cols-2 gap-10 reveal mb-24">
+                
+                <!-- Card 1: Ciberseguridad -->
+                <div class="cyber-card group h-full" onmousemove="handleTilt(event, this)" onmouseleave="resetTilt(this)">
+                    <div class="cyber-card-inner h-full rounded-2xl border border-gray-800 p-8 md:p-10 relative overflow-hidden bg-dark-card/90">
+                        <div class="absolute top-0 right-0 p-6 opacity-20 group-hover:opacity-100 transition-opacity duration-500">
+                            <i class="fa-solid fa-user-secret text-7xl text-primary cyber-icon"></i>
+                        </div>
+                        
+                        <div class="cyber-card-content relative z-10">
+                            <h3 class="text-2xl font-bold text-white mb-6 group-hover:text-primary transition-colors flex items-center gap-3">
+                                <i class="fa-solid fa-shield-halved"></i> Ciberseguridad
+                            </h3>
+                            <div class="space-y-4 font-mono text-sm text-gray-400">
+                                <div class="flex items-center gap-3 bg-black/40 p-3 rounded-lg border border-gray-800 group-hover:border-primary/40 transition-colors">
+                                    <span class="text-primary">>></span> Pentesting Ético & OSINT
+                                </div>
+                                <div class="flex items-center gap-3 bg-black/40 p-3 rounded-lg border border-gray-800 group-hover:border-primary/40 transition-colors">
+                                    <span class="text-primary">>></span> Auditoría de Redes (Wireshark)
+                                </div>
+                                <div class="flex items-center gap-3 bg-black/40 p-3 rounded-lg border border-gray-800 group-hover:border-primary/40 transition-colors">
+                                    <span class="text-primary">>></span> Arquitectura de Redes & OSI
+                                </div>
+                                <div class="flex items-center gap-3 bg-black/40 p-3 rounded-lg border border-gray-800 group-hover:border-primary/40 transition-colors">
+                                    <span class="text-primary">>></span> Linux (Arch, Kali, Debian)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Card 2: Desarrollo & IoT -->
+                <div class="cyber-card group h-full" onmousemove="handleTilt(event, this)" onmouseleave="resetTilt(this)">
+                    <div class="cyber-card-inner h-full rounded-2xl border border-gray-800 p-8 md:p-10 relative overflow-hidden bg-dark-card/90">
+                        <div class="absolute top-0 right-0 p-6 opacity-20 group-hover:opacity-100 transition-opacity duration-500">
+                            <i class="fa-solid fa-microchip text-7xl text-blue-500 cyber-icon"></i>
+                        </div>
+                        
+                        <div class="cyber-card-content relative z-10">
+                            <h3 class="text-2xl font-bold text-white mb-6 group-hover:text-blue-500 transition-colors flex items-center gap-3">
+                                <i class="fa-solid fa-code"></i> Desarrollo & IoT
+                            </h3>
+                            <div class="space-y-4 font-mono text-sm text-gray-400">
+                                <div class="flex items-center gap-3 bg-black/40 p-3 rounded-lg border border-gray-800 group-hover:border-blue-500/40 transition-colors">
+                                    <span class="text-blue-500">>></span> Python, C++, C#
+                                </div>
+                                <div class="flex items-center gap-3 bg-black/40 p-3 rounded-lg border border-gray-800 group-hover:border-blue-500/40 transition-colors">
+                                    <span class="text-blue-500">>></span> ESP32 & Arduino (Sensórica)
+                                </div>
+                                <div class="flex items-center gap-3 bg-black/40 p-3 rounded-lg border border-gray-800 group-hover:border-blue-500/40 transition-colors">
+                                    <span class="text-blue-500">>></span> Bash Scripting & Git
+                                </div>
+                                <div class="flex items-center gap-3 bg-black/40 p-3 rounded-lg border border-gray-800 group-hover:border-blue-500/40 transition-colors">
+                                    <span class="text-blue-500">>></span> HTML5, CSS3, JS
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- TECH STACK CAROUSEL -->
+            <div class="w-full relative py-10 border-t border-gray-800/50 reveal">
+                <div class="text-center mb-10">
+                    <p class="font-mono text-sm text-gray-400 tracking-[0.2em] uppercase">Tecnologías & Herramientas</p>
+                </div>
+                
+                <div class="flex overflow-hidden group gap-16">
+                    <!-- Lista 1 -->
+                    <div class="flex shrink-0 animate-infinite-scroll gap-16 items-center justify-around min-w-full">
+                        <div class="tech-item flex flex-col items-center gap-2"><i class="devicon-python-plain text-5xl tech-icon"></i><span class="text-xs font-mono text-gray-500 mt-2">Python</span></div>
+                        <div class="tech-item flex flex-col items-center gap-2"><i class="devicon-cplusplus-plain text-5xl tech-icon"></i><span class="text-xs font-mono text-gray-500 mt-2">C++</span></div>
+                        <div class="tech-item flex flex-col items-center gap-2"><i class="devicon-csharp-plain text-5xl tech-icon"></i><span class="text-xs font-mono text-gray-500 mt-2">C#</span></div>
+                        <div class="tech-item flex flex-col items-center gap-2"><i class="devicon-bash-plain text-5xl tech-icon"></i><span class="text-xs font-mono text-gray-500 mt-2">Bash</span></div>
+                        <div class="tech-item flex flex-col items-center gap-2"><i class="devicon-kalilinux-plain text-5xl tech-icon"></i><span class="text-xs font-mono text-gray-500 mt-2">Kali</span></div>
+                        <div class="tech-item flex flex-col items-center gap-2"><i class="devicon-javascript-plain text-5xl tech-icon"></i><span class="text-xs font-mono text-gray-500 mt-2">JS</span></div>
+                        <div class="tech-item flex flex-col items-center gap-2"><i class="devicon-linux-plain text-5xl tech-icon"></i><span class="text-xs font-mono text-gray-500 mt-2">Linux</span></div>
+                        <div class="tech-item flex flex-col items-center gap-2"><i class="devicon-git-plain text-5xl tech-icon"></i><span class="text-xs font-mono text-gray-500 mt-2">Git</span></div>
+                         <div class="tech-item flex flex-col items-center gap-2"><i class="devicon-microsoftsqlserver-plain text-5xl tech-icon"></i><span class="text-xs font-mono text-gray-500 mt-2">SQL</span></div>
+                    </div>
+                    <!-- Lista 2 -->
+                    <div class="flex shrink-0 animate-infinite-scroll gap-16 items-center justify-around min-w-full" aria-hidden="true">
+                        <div class="tech-item flex flex-col items-center gap-2"><i class="devicon-python-plain text-5xl tech-icon"></i><span class="text-xs font-mono text-gray-500 mt-2">Python</span></div>
+                        <div class="tech-item flex flex-col items-center gap-2"><i class="devicon-cplusplus-plain text-5xl tech-icon"></i><span class="text-xs font-mono text-gray-500 mt-2">C++</span></div>
+                        <div class="tech-item flex flex-col items-center gap-2"><i class="devicon-csharp-plain text-5xl tech-icon"></i><span class="text-xs font-mono text-gray-500 mt-2">C#</span></div>
+                        <div class="tech-item flex flex-col items-center gap-2"><i class="devicon-bash-plain text-5xl tech-icon"></i><span class="text-xs font-mono text-gray-500 mt-2">Bash</span></div>
+                        <div class="tech-item flex flex-col items-center gap-2"><i class="devicon-kalilinux-plain text-5xl tech-icon"></i><span class="text-xs font-mono text-gray-500 mt-2">Kali</span></div>
+                        <div class="tech-item flex flex-col items-center gap-2"><i class="devicon-javascript-plain text-5xl tech-icon"></i><span class="text-xs font-mono text-gray-500 mt-2">JS</span></div>
+                        <div class="tech-item flex flex-col items-center gap-2"><i class="devicon-linux-plain text-5xl tech-icon"></i><span class="text-xs font-mono text-gray-500 mt-2">Linux</span></div>
+                        <div class="tech-item flex flex-col items-center gap-2"><i class="devicon-git-plain text-5xl tech-icon"></i><span class="text-xs font-mono text-gray-500 mt-2">Git</span></div>
+                        <div class="tech-item flex flex-col items-center gap-2"><i class="devicon-microsoftsqlserver-plain text-5xl tech-icon"></i><span class="text-xs font-mono text-gray-500 mt-2">SQL</span></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Certifications Section -->
+    <section id="certifications" class="py-16 relative bg-dark-card/30">
+        <div class="container mx-auto px-6 max-w-6xl">
+            <h2 class="text-3xl md:text-5xl font-bold mb-12 text-center reveal">
+                <span class="text-primary font-mono text-xl block mb-2">05.</span>
+                Certificaciones
+            </h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 reveal">
+
+                <!-- Cert 1 -->
+                <div class="glass-heavy p-6 rounded-xl border border-gray-800 hover:border-primary transition-all group flex flex-col gap-4">
+                    <div class="w-12 h-12 bg-green-500/10 rounded-lg flex items-center justify-center text-green-500 group-hover:bg-green-500 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-check text-2xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold text-white">Redes Informáticas de Internet</h4>
+                        <p class="text-sm text-gray-400 font-mono">Platzi</p>
+                    </div>
+                    <div class="mt-auto pt-4 border-t border-gray-800 flex justify-between items-center text-xs text-gray-500">
+                        <span>Completado</span>
+                    </div>
+                </div>
+
+                <!-- Cert 2 -->
+                <div class="glass-heavy p-6 rounded-xl border border-gray-800 hover:border-blue-500 transition-all group flex flex-col gap-4">
+                    <div class="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-500 group-hover:bg-blue-500 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-spinner fa-spin text-2xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold text-white">CCST Network</h4>
+                        <p class="text-sm text-gray-400 font-mono">Cisco Certified Support Technician</p>
+                    </div>
+                    <div class="mt-auto pt-4 border-t border-gray-800 flex justify-between items-center text-xs text-gray-500">
+                        <span class="text-blue-400">En proceso</span>
+                    </div>
+                </div>
+
+                <!-- Cert 3 -->
+                <div class="glass-heavy p-6 rounded-xl border border-gray-800 hover:border-blue-500 transition-all group flex flex-col gap-4">
+                    <div class="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-500 group-hover:bg-blue-500 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-shield-cat text-2xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold text-white">CCST Cybersecurity</h4>
+                        <p class="text-sm text-gray-400 font-mono">Cisco Certified Support Technician</p>
+                    </div>
+                    <div class="mt-auto pt-4 border-t border-gray-800 flex justify-between items-center text-xs text-gray-500">
+                        <span class="text-blue-400">En proceso</span>
+                    </div>
+                </div>
+
+                <!-- Cert 4 -->
+                <div class="glass-heavy p-6 rounded-xl border border-gray-800 hover:border-blue-500 transition-all group flex flex-col gap-4">
+                    <div class="w-12 h-12 bg-blue-500/10 rounded-lg flex items-center justify-center text-blue-500 group-hover:bg-blue-500 group-hover:text-white transition-colors">
+                        <i class="fa-solid fa-network-wired text-2xl"></i>
+                    </div>
+                    <div>
+                        <h4 class="text-lg font-bold text-white">CCNA</h4>
+                        <p class="text-sm text-gray-400 font-mono">Cisco Certified Network Associate</p>
+                    </div>
+                    <div class="mt-auto pt-4 border-t border-gray-800 flex justify-between items-center text-xs text-gray-500">
+                        <span class="text-blue-400">En proceso</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Recognitions Section (RESTAURADA) -->
+    <section id="awards" class="py-16 bg-dark-card/30">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <h2 class="text-3xl md:text-5xl font-bold mb-12 text-center reveal">
+                <span class="text-primary font-mono text-xl block mb-2">06.</span>
+                Reconocimientos
+            </h2>
+
+            <!-- Contenedor del Carrusel -->
+            <div class="relative w-full max-w-3xl mx-auto min-h-[550px] md:min-h-[500px]">
+                
+                <!-- Slide 1 -->
+                <div class="award-slide active flex flex-col items-center gap-6">
+                    <!-- Espacio para Imagen del Certificado -->
+                    <div class="w-full max-w-2xl h-96 bg-gray-900 rounded-xl flex items-center justify-center border border-gray-800 relative group overflow-hidden">
+                        <div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        <img src="img/secon.jpeg" alt="" class="w-full h-full object-cover">
+                    </div>
+                    
+                    <!-- Tarjeta de Info -->
+                    <div class="w-full flex flex-col md:flex-row gap-6 p-6 rounded-xl border border-gray-800 bg-dark/50 hover:bg-dark/80 transition-colors items-center">
+                        <div class="flex-shrink-0 text-gray-400 text-4xl">
+                            <i class="fa-solid fa-medal"></i>
+                        </div>
+                        <div class="flex-grow text-center md:text-left">
+                            <h3 class="text-xl font-bold text-white">2do Lugar - Robótica (FLIA UGB)</h3>
+                            <p class="text-gray-400">Segundo lugar en la Feria de Logros en la especialidad de Automatización y Robótica.</p>
+                        </div>
+                        <div class="text-primary font-mono text-sm border border-primary/30 px-3 py-1 rounded-full">
+                            2025
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Slide 2 -->
+                <div class="award-slide flex flex-col items-center gap-6">
+                    <!-- Espacio para Imagen del Certificado -->
+                    <div class="w-full max-w-2xl h-96 bg-gray-900 rounded-xl flex items-center justify-center border border-gray-800 relative group overflow-hidden">
+                        <div class="absolute inset-0 bg-primary/5 opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                        <img src="img/tercero.jpeg" alt="" class="w-full h-full object-cover">
+                    </div>
+                    
+                    <!-- Tarjeta de Info -->
+                    <div class="w-full flex flex-col md:flex-row gap-6 p-6 rounded-xl border border-gray-800 bg-dark/50 hover:bg-dark/80 transition-colors items-center">
+                        <div class="flex-shrink-0 text-orange-400 text-4xl">
+                            <i class="fa-solid fa-medal"></i>
+                        </div>
+                        <div class="flex-grow text-center md:text-left">
+                            <h3 class="text-xl font-bold text-white">3er Lugar - Robótica (FLIA UGB)</h3>
+                            <p class="text-gray-400">Tercer lugar en la Feria de Logros en la especialidad de Automatización y Robótica.</p>
+                        </div>
+                        <div class="text-primary font-mono text-sm border border-primary/30 px-3 py-1 rounded-full">
+                            2025
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Controls -->
+                <button onclick="changeAward(-1)" class="absolute top-[40%] -left-2 md:-left-16 transform -translate-y-1/2 bg-black/50 hover:bg-primary text-white p-3 rounded-full border border-gray-700 hover:border-primary transition-all z-20 w-10 h-10 flex items-center justify-center">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                <button onclick="changeAward(1)" class="absolute top-[40%] -right-2 md:-right-16 transform -translate-y-1/2 bg-black/50 hover:bg-primary text-white p-3 rounded-full border border-gray-700 hover:border-primary transition-all z-20 w-10 h-10 flex items-center justify-center">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+
+                <!-- Dots Indicators -->
+                <div class="flex justify-center gap-3 mt-8">
+                    <button onclick="setAward(0)" class="award-dot w-3 h-3 rounded-full bg-primary transition-all"></button>
+                    <button onclick="setAward(1)" class="award-dot w-3 h-3 rounded-full bg-gray-700 hover:bg-gray-500 transition-all"></button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="formacion" class="py-24">
+        <div class="container mx-auto px-6 max-w-4xl">
+             <h2 class="text-3xl md:text-5xl font-bold mb-16 text-center reveal">
+                <span class="text-primary font-mono text-xl block mb-2">07.</span>
+                Formación Académica
+            </h2>
+            
+            <div class="space-y-8 reveal">
+                <!-- Item 1: UGB -->
+                <div class="glass-heavy p-8 rounded-2xl flex flex-col sm:flex-row items-center gap-8 border-l-4 border-l-primary hover:translate-x-2 transition-transform duration-300">
+                    <div class="w-24 h-24 flex-shrink-0 bg-white rounded-xl flex items-center justify-center shadow-[0_0_20px_rgba(255,255,255,0.1)]">
+                        <img src="img/ugb.webp" alt="UGB" class="w-full h-full object-contain">
+                    </div>
+                    <div class="text-center sm:text-left flex-grow space-y-2">
+                        <h3 class="text-2xl font-bold text-white">Ingeniería en Sistemas y Redes</h3>
+                        <p class="text-primary font-mono text-lg">Universidad Gerardo Barrios</p>
+                        <p class="text-gray-400 leading-relaxed">2025 -- Actualidad.</p>
+                    </div>
+                </div>
+
+                <!-- Item 2: Inglés -->
+                <div class="glass-heavy p-8 rounded-2xl flex flex-col sm:flex-row items-center gap-8 border-l-4 border-l-gray-600 hover:translate-x-2 hover:border-l-primary transition-all duration-300">
+                    <div class="w-24 h-24 flex-shrink-0 bg-white rounded-xl flex items-center justify-center shadow-[0_0_20px_rgba(255,255,255,0.1)]">
+                        <img src="img/academiaeuropea.webp" alt="Academia Europea" class="w-full h-full object-contain">
+                    </div>
+                    <div class="text-center sm:text-left flex-grow space-y-2">
+                        <h3 class="text-2xl font-bold text-white">Idioma Inglés (Intermedio)</h3>
+                        <p class="text-primary font-mono text-lg">Academia Europea</p>
+                        <p class="text-gray-400 leading-relaxed">2025 -- Actualidad.</p>
+                    </div>
+                </div>
+
+                <!-- Item 3: Bachillerato (NUEVO) -->
+                <div class="glass-heavy p-8 rounded-2xl flex flex-col sm:flex-row items-center gap-8 border-l-4 border-l-gray-600 hover:translate-x-2 hover:border-l-primary transition-all duration-300">
+                    <div class="w-24 h-24 flex-shrink-0 bg-white rounded-xl flex items-center justify-center shadow-[0_0_20px_rgba(255,255,255,0.1)]">
+                        <i class="fa-solid fa-graduation-cap text-4xl text-black"></i>
+                    </div>
+                    <div class="text-center sm:text-left flex-grow space-y-2">
+                        <h3 class="text-2xl font-bold text-white">Bachillerato General</h3>
+                        <p class="text-primary font-mono text-lg">Instituto Nacional de Usulután</p>
+                        <p class="text-gray-400 leading-relaxed">2023 -- 2024</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer (TEXTO RESTAURADO) -->
+    <footer id="contacto" class="relative pt-24 pb-28 overflow-hidden">
+        <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-primary to-transparent opacity-50"></div>
+
+        <div class="container mx-auto px-6 max-w-5xl relative z-10">
+            <div class="grid md:grid-cols-2 gap-16 mb-20">
+                <!-- Info -->
+                <div class="text-center md:text-left">
+                    <h2 class="text-4xl font-bold mb-6">¿Tienes un proyecto?</h2>
+                    <p class="text-gray-400 mb-8 text-lg">
+                        Estoy siempre abierto a discutir nuevos proyectos, ideas creativas o oportunidades para ser parte de tus visiones.
+                    </p>
+                    <div class="mb-8">
+                         <p class="text-gray-400 text-lg mb-2">
+                            <i class="fa-solid fa-location-dot text-primary mr-2"></i> Usulután, El Salvador
+                        </p>
+                        <p class="text-gray-400 text-lg">
+                            <i class="fa-solid fa-phone text-primary mr-2"></i> +503 7533 3106
+                        </p>
+                    </div>
+                    <div class="flex gap-4 justify-center md:justify-start">
+                        <a href="https://github.com/whoamijas0n" target="_blank" class="w-12 h-12 rounded-lg border border-gray-700 flex items-center justify-center text-gray-400 hover:text-white hover:border-primary hover:bg-primary transition-all">
+                            <i class="fa-brands fa-github text-xl"></i>
+                        </a>
+                        <a href="https://linkedin.com/in/whoamijas0n" target="_blank" class="w-12 h-12 rounded-lg border border-gray-700 flex items-center justify-center text-gray-400 hover:text-white hover:border-primary hover:bg-primary transition-all">
+                            <i class="fa-brands fa-linkedin text-xl"></i>
+                        </a>
+                        <a href="mailto:jasonadonayv@gmail.com" class="w-12 h-12 rounded-lg border border-gray-700 flex items-center justify-center text-gray-400 hover:text-white hover:border-primary hover:bg-primary transition-all">
+                            <i class="fa-solid fa-envelope text-xl"></i>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Formulario -->
+                <form id="contact-form" action="https://formspree.io/f/mvgwlkvj" method="POST" class="glass p-8 rounded-2xl border border-gray-800">
+                    <h3 class="text-xl font-bold mb-6 text-white">Envíame un mensaje</h3>
+                    <div class="space-y-4">
+                        <input type="text" name="name" required class="w-full bg-dark/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="Nombre">
+                        <input type="email" name="_replyto" required class="w-full bg-dark/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors" placeholder="Email">
+                        <textarea name="message" rows="4" required class="w-full bg-dark/50 border border-gray-700 rounded-lg px-4 py-3 text-white focus:outline-none focus:border-primary transition-colors resize-none" placeholder="Mensaje"></textarea>
+                        <button type="submit" class="w-full py-3 bg-gradient-to-r from-primary to-primary-dark rounded-lg font-bold text-white hover:opacity-90 transition-opacity shadow-lg">Enviar</button>
+                    </div>
+                </form>
+            </div>
+            <div class="text-center pt-8 border-t border-gray-800">
+                <p class="text-gray-500 font-mono text-sm">© 2025 Jason Caballero</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- NAVBAR INFERIOR FLOTANTE -->
+    <nav class="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50">
+        <div class="glass-heavy rounded-full px-2 py-2 flex items-center gap-1 shadow-[0_10px_40px_rgba(0,0,0,0.5)] border border-gray-800/80 backdrop-blur-xl scale-90 md:scale-100">
+            
+            <a href="#home" class="nav-item group relative p-3 rounded-full hover:bg-white/10 transition-all text-gray-400 hover:text-white">
+                <i class="fa-solid fa-house text-xl"></i>
+                <span class="nav-tooltip absolute -top-10 left-1/2 -translate-x-1/2 bg-black text-white text-xs px-2 py-1 rounded opacity-0 transition-all duration-300 pointer-events-none">Inicio</span>
+            </a>
+
+            <a href="#about" class="nav-item group relative p-3 rounded-full hover:bg-white/10 transition-all text-gray-400 hover:text-white">
+                <i class="fa-solid fa-user text-xl"></i>
+                <span class="nav-tooltip absolute -top-10 left-1/2 -translate-x-1/2 bg-black text-white text-xs px-2 py-1 rounded opacity-0 transition-all duration-300 pointer-events-none">Sobre Mí</span>
+            </a>
+
+            <a href="#experience" class="nav-item group relative p-3 rounded-full hover:bg-white/10 transition-all text-gray-400 hover:text-white">
+                <i class="fa-solid fa-briefcase text-xl"></i>
+                <span class="nav-tooltip absolute -top-10 left-1/2 -translate-x-1/2 bg-black text-white text-xs px-2 py-1 rounded opacity-0 transition-all duration-300 pointer-events-none">Experiencia</span>
+            </a>
+
+            <a href="#proyects" class="nav-item group relative p-3 rounded-full hover:bg-white/10 transition-all text-gray-400 hover:text-white">
+                <i class="fa-solid fa-code-branch text-xl"></i>
+                <span class="nav-tooltip absolute -top-10 left-1/2 -translate-x-1/2 bg-black text-white text-xs px-2 py-1 rounded opacity-0 transition-all duration-300 pointer-events-none">Proyectos</span>
+            </a>
+
+            <a href="#certifications" class="nav-item group relative p-3 rounded-full hover:bg-white/10 transition-all text-gray-400 hover:text-white">
+                <i class="fa-solid fa-certificate text-xl"></i>
+                <span class="nav-tooltip absolute -top-10 left-1/2 -translate-x-1/2 bg-black text-white text-xs px-2 py-1 rounded opacity-0 transition-all duration-300 pointer-events-none">Certif</span>
+            </a>
+
+             <a href="#awards" class="nav-item group relative p-3 rounded-full hover:bg-white/10 transition-all text-gray-400 hover:text-white">
+                <i class="fa-solid fa-medal text-xl"></i>
+                <span class="nav-tooltip absolute -top-10 left-1/2 -translate-x-1/2 bg-black text-white text-xs px-2 py-1 rounded opacity-0 transition-all duration-300 pointer-events-none">Logros</span>
+            </a>
+
+            <div class="w-px h-6 bg-gray-700 mx-2"></div>
+
+            <a href="#contacto" class="nav-item group relative p-3 rounded-full bg-primary/20 text-primary hover:bg-primary hover:text-white transition-all">
+                <i class="fa-solid fa-paper-plane text-xl"></i>
+                <span class="nav-tooltip absolute -top-10 left-1/2 -translate-x-1/2 bg-black text-white text-xs px-2 py-1 rounded opacity-0 transition-all duration-300 pointer-events-none">Contacto</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
