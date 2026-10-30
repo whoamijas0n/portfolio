@@ -3,7 +3,14 @@
    ========================================================================== */
 
 // --- 1. Typewriter Effect ---
-const texts = ["Ciberseguridad", "Infraestructura TI", "IoT", "Desarrollo"];
+const texts = [
+    "Ciberseguridad Defensiva",
+    "Telecomunicaciones & Redes",
+    "Servidores con Proxmox VE",
+    "Bases de Datos (PostgreSQL & MariaDB)",
+    "Infraestructura & Linux",
+    "Desarrollo & IoT"
+];
 let count = 0;
 let index = 0;
 let currentText = "";
@@ -185,10 +192,39 @@ function filterProjects(category) {
 }
 window.filterProjects = filterProjects;
 
-// --- 6. Awards Carousel Logic ---
+// --- 6. Awards Carousel & Modal Logic ---
 let slideIndex = 0;
 const slides = document.getElementsByClassName("award-slide");
 const dots = document.getElementsByClassName("award-dot");
+const tabs = document.getElementsByClassName("award-tab");
+const counterEl = document.getElementById("award-counter");
+
+const awardCertificates = [
+    {
+        img: 'img/primer.jpg',
+        title: 'Primer Lugar en Desarrollo de Software — FLIA UGB 2026',
+        badge: '1ER LUGAR 🥇 FLIA 2026',
+        badgeClass: 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/40'
+    },
+    {
+        img: 'img/coninfo.jpg',
+        title: 'Tercer Lugar Nacional — CONINFO 2026 «MakeSing» (ASPROC)',
+        badge: '3ER LUGAR 🥉 CONINFO 2026',
+        badgeClass: 'bg-cyan-500/20 text-cyan-400 border border-cyan-500/40'
+    },
+    {
+        img: 'img/secon.jpeg',
+        title: 'Segundo Lugar en Automatización y Robótica — FLIA UGB 2025',
+        badge: '2DO LUGAR 🥈 ROBÓTICA 2025',
+        badgeClass: 'bg-slate-400/20 text-slate-300 border border-slate-400/40'
+    },
+    {
+        img: 'img/tercero.jpeg',
+        title: 'Tercer Lugar en Automatización y Robótica — FLIA UGB 2025',
+        badge: '3ER LUGAR 🥉 ROBÓTICA 2025',
+        badgeClass: 'bg-amber-600/20 text-amber-500 border border-amber-600/40'
+    }
+];
 
 function changeAward(n) {
     showSlides(slideIndex += n);
@@ -203,29 +239,108 @@ function showSlides(n) {
     if (n >= slides.length) { slideIndex = 0; }
     if (n < 0) { slideIndex = slides.length - 1; }
     
+    // Hide all slides
     for (let i = 0; i < slides.length; i++) {
         slides[i].classList.remove("active");
         slides[i].style.display = "none";
+        
         if (dots[i]) {
-            dots[i].classList.remove("bg-primary");
-            dots[i].classList.add("bg-gray-700");
+            dots[i].classList.remove("bg-primary", "w-8");
+            dots[i].classList.add("bg-gray-700", "w-3");
+        }
+        if (tabs[i]) {
+            tabs[i].classList.remove("active");
         }
     }
     
+    // Show active slide
     slides[slideIndex].classList.add("active");
     slides[slideIndex].style.display = "flex";
+    
     if (dots[slideIndex]) {
-        dots[slideIndex].classList.remove("bg-gray-700");
-        dots[slideIndex].classList.add("bg-primary");
+        dots[slideIndex].classList.remove("bg-gray-700", "w-3");
+        dots[slideIndex].classList.add("bg-primary", "w-8");
+    }
+    if (tabs[slideIndex]) {
+        tabs[slideIndex].classList.add("active");
+    }
+    if (counterEl) {
+        counterEl.textContent = `${String(slideIndex + 1).padStart(2, '0')} / ${String(slides.length).padStart(2, '0')}`;
     }
 }
 
+// Modal Functions
+function openCertificateModal(idx) {
+    const data = awardCertificates[idx] || awardCertificates[slideIndex];
+    if (!data) return;
+
+    const modal = document.getElementById("certificate-modal");
+    const modalImg = document.getElementById("modal-image");
+    const modalTitle = document.getElementById("modal-title");
+    const modalBadge = document.getElementById("modal-badge");
+
+    if (modal && modalImg) {
+        modalImg.src = data.img;
+        if (modalTitle) modalTitle.textContent = data.title;
+        if (modalBadge) {
+            modalBadge.textContent = data.badge;
+            modalBadge.className = `px-3 py-1 rounded-full text-xs font-mono font-bold ${data.badgeClass}`;
+        }
+        modal.classList.remove("hidden");
+        // Force reflow for CSS transition
+        void modal.offsetWidth;
+        modal.classList.add("modal-open");
+        document.body.style.overflow = "hidden";
+    }
+}
+
+function closeCertificateModal() {
+    const modal = document.getElementById("certificate-modal");
+    if (modal) {
+        modal.classList.remove("modal-open");
+        setTimeout(() => {
+            modal.classList.add("hidden");
+            document.body.style.overflow = "";
+        }, 250);
+    }
+}
+
+// Touch swipe support for awards carousel
+const carouselContainer = document.getElementById("awards-carousel-container");
+if (carouselContainer) {
+    let touchStartX = 0;
+    let touchEndX = 0;
+
+    carouselContainer.addEventListener('touchstart', (e) => {
+        touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+
+    carouselContainer.addEventListener('touchend', (e) => {
+        touchEndX = e.changedTouches[0].screenX;
+        const diffX = touchEndX - touchStartX;
+        if (Math.abs(diffX) > 45) {
+            if (diffX < 0) changeAward(1);
+            else changeAward(-1);
+        }
+    }, { passive: true });
+}
+
+// Global ESC key listener for modal
+document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+        closeCertificateModal();
+    }
+});
+
+// Initialize on DOM load
 if (slides.length > 0) {
     showSlides(slideIndex);
 }
 
 window.changeAward = changeAward;
 window.setAward = setAward;
+window.openCertificateModal = openCertificateModal;
+window.closeCertificateModal = closeCertificateModal;
 
 // --- 7. Form Submission ---
 const form = document.getElementById("contact-form");
