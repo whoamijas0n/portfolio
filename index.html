@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
     <title>Jason Caballero | Red Team · Telecomunicaciones · Infraestructura</title>
     <meta name="description" content="Portfolio de Jason Caballero — Estudiante de Ingeniería en Sistemas y Redes, especializado en ciberseguridad Red Team, telecomunicaciones Cisco e infraestructura con Proxmox VE.">
 
@@ -37,7 +37,7 @@
     <!-- ═══════════════════════════════════════════════════════════════
          HERO SECTION
     ════════════════════════════════════════════════════════════════ -->
-    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden pt-20 pb-28 sm:pb-32 md:py-24">
 
         <!-- Hex grid overlay -->
         <div class="hex-grid"></div>
@@ -56,7 +56,7 @@
             <span class="text-gray-600">20:48 CST</span>
         </div>
 
-        <div class="container mx-auto px-6 relative z-10 text-center">
+        <div class="container mx-auto px-4 sm:px-6 relative z-10 text-center">
 
             <!-- Section tag -->
             <div class="inline-flex items-center gap-2 mb-6 px-4 py-1.5 rounded-full border border-red-800/50 bg-red-950/30 backdrop-blur-sm">
@@ -64,18 +64,20 @@
                 <span class="font-mono text-xs text-red-400 tracking-widest uppercase">Red Team Engineer</span>
             </div>
 
-            <h1 class="text-6xl md:text-8xl lg:text-9xl font-bold mb-4 tracking-tight leading-none"
+            <h1 class="text-4xl sm:text-6xl md:text-8xl lg:text-9xl font-bold mb-4 tracking-tight leading-none"
                 style="font-family:'Outfit',sans-serif;">
                 Jason
                 <span class="glitch text-gradient-red" data-text="Caballero">Caballero</span>
             </h1>
 
-            <div class="h-10 md:h-14 mb-8 flex items-center justify-center">
-                <span class="font-mono text-lg md:text-2xl text-gray-500">~/</span>
-                <span id="typewriter" class="font-mono text-lg md:text-2xl text-gray-300 blink-caret ml-1 pr-1"></span>
+            <div class="hero-typewriter-row md:h-14 mb-8 flex items-center justify-center text-center">
+                <span class="font-mono text-base sm:text-lg md:text-2xl">
+                    <span class="typewriter-prefix text-gray-500">~/</span>
+                    <span id="typewriter" class="font-mono text-base sm:text-lg md:text-2xl text-gray-300 blink-caret ml-1 pr-1"></span>
+                </span>
             </div>
 
-            <p class="max-w-2xl mx-auto text-gray-400 text-base md:text-lg mb-10 leading-relaxed">
+            <p class="max-w-2xl mx-auto text-gray-400 text-base md:text-lg mb-10 leading-relaxed px-2 sm:px-0">
                 Estudiante de <span class="text-white font-semibold">Ingeniería en Sistemas y Redes</span> especializado
                 en <span class="text-red-400 font-semibold">ciberseguridad Red Team</span>,
                 <span class="text-white font-semibold">telecomunicaciones Cisco</span>,
@@ -84,20 +86,20 @@
             </p>
 
             <!-- CTA buttons -->
-            <div class="flex flex-col sm:flex-row gap-4 justify-center items-center mb-14">
+            <div class="flex flex-col sm:flex-row gap-3 sm:gap-4 justify-center items-center mb-10 md:mb-14 w-full max-w-md mx-auto">
                 <a href="#proyects"
-                    class="group px-8 py-3.5 bg-red-700 text-white rounded-lg font-semibold hover:bg-red-600 transition-all shadow-[0_0_25px_rgba(220,38,38,0.45)] hover:shadow-[0_0_40px_rgba(220,38,38,0.7)] hover:-translate-y-1 font-mono text-sm tracking-wide flex items-center gap-2">
+                    class="group w-full sm:w-auto px-6 sm:px-8 py-3.5 bg-red-700 text-white rounded-lg font-semibold hover:bg-red-600 transition-all shadow-[0_0_25px_rgba(220,38,38,0.45)] hover:shadow-[0_0_40px_rgba(220,38,38,0.7)] hover:-translate-y-1 font-mono text-sm tracking-wide flex items-center justify-center gap-2">
                     <i class="fa-solid fa-terminal"></i> Ver Proyectos
                     <i class="fa-solid fa-arrow-right group-hover:translate-x-1 transition-transform"></i>
                 </a>
                 <a href="files/cv-jason-caballero.pdf" download
-                    class="group px-8 py-3.5 border border-gray-700 rounded-lg font-semibold hover:border-red-600 transition-all hover:bg-red-950/40 font-mono text-sm tracking-wide flex items-center gap-2 text-gray-300 hover:text-white">
+                    class="group w-full sm:w-auto px-6 sm:px-8 py-3.5 border border-gray-700 rounded-lg font-semibold hover:border-red-600 transition-all hover:bg-red-950/40 font-mono text-sm tracking-wide flex items-center justify-center gap-2 text-gray-300 hover:text-white">
                     <i class="fa-solid fa-download group-hover:animate-bounce"></i> Descargar CV
                 </a>
             </div>
 
             <!-- Stats row -->
-            <div id="hero-stats" class="flex flex-wrap justify-center gap-4 max-w-2xl mx-auto">
+            <div id="hero-stats" class="grid grid-cols-2 sm:grid-cols-4 gap-3 sm:gap-4 max-w-2xl mx-auto w-full px-2">
                 <div class="stat-block text-center">
                     <div class="text-2xl font-bold text-red-400 font-mono" data-count="6" data-suffix="+">6+</div>
                     <div class="text-xs text-gray-500 font-mono mt-0.5">Proyectos</div>
@@ -118,7 +120,7 @@
         </div>
 
         <!-- Scroll indicator -->
-        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 text-gray-600">
+        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 hidden md:flex flex-col items-center gap-1 text-gray-600">
             <span class="font-mono text-[10px] tracking-widest uppercase">scroll</span>
             <div class="w-px h-12 bg-gradient-to-b from-red-600 to-transparent animate-pulse"></div>
         </div>
@@ -129,16 +131,16 @@
     <!-- ═══════════════════════════════════════════════════════════════
          ABOUT / PERFIL PROFESIONAL
     ════════════════════════════════════════════════════════════════ -->
-    <section id="about" class="py-24 relative">
-        <div class="container mx-auto px-6 max-w-6xl">
-            <h2 class="text-3xl md:text-5xl font-bold mb-16 text-center reveal">
+    <section id="about" class="py-16 md:py-24 relative">
+        <div class="container mx-auto px-4 sm:px-6 max-w-6xl">
+            <h2 class="text-3xl md:text-5xl font-bold mb-10 md:mb-16 text-center reveal">
                 <span class="section-number">01. // Perfil</span>
                 Profesional
             </h2>
 
-            <div class="grid md:grid-cols-2 gap-14 items-center reveal">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10 lg:gap-14 items-center reveal">
                 <!-- Photo -->
-                <div class="relative group mx-auto md:mx-0 max-w-sm">
+                <div class="relative group mx-auto md:mx-0 max-w-xs sm:max-w-sm w-full">
                     <div class="absolute -inset-3 bg-gradient-to-tr from-red-800/40 via-transparent to-red-900/20 rounded-2xl blur-xl group-hover:from-red-700/60 transition duration-700"></div>
                     <div class="relative rounded-2xl overflow-hidden border border-red-900/40 bg-dark-card">
                         <img src="img/jason.webp" alt="Jason Caballero"
@@ -177,24 +179,24 @@
                         y administración integral de <span class="text-white font-medium">PostgreSQL y MariaDB</span>.
                     </p>
 
-                    <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3 mt-6 font-mono text-sm text-gray-300">
-                        <li class="flex items-center gap-2.5 bg-red-950/20 p-3 rounded-lg border border-red-900/30 hover:border-red-700/50 transition-colors">
-                            <i class="fa-solid fa-user-secret text-red-500"></i><span>Ciberseguridad Red Team</span>
+                    <ul class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-1 xl:grid-cols-2 gap-2.5 sm:gap-3 mt-6 font-mono text-sm text-gray-300">
+                        <li class="flex items-center gap-2.5 bg-red-950/20 p-2.5 sm:p-3 rounded-lg border border-red-900/30 hover:border-red-700/50 transition-colors">
+                            <i class="fa-solid fa-user-secret text-red-500 flex-shrink-0"></i><span>Ciberseguridad Red Team</span>
                         </li>
-                        <li class="flex items-center gap-2.5 bg-dark-card/60 p-3 rounded-lg border border-gray-800/80 hover:border-red-900/50 transition-colors">
-                            <i class="fa-solid fa-network-wired text-red-500"></i><span>Telecomunicaciones & Cisco</span>
+                        <li class="flex items-center gap-2.5 bg-dark-card/60 p-2.5 sm:p-3 rounded-lg border border-gray-800/80 hover:border-red-900/50 transition-colors">
+                            <i class="fa-solid fa-network-wired text-red-500 flex-shrink-0"></i><span>Telecomunicaciones & Cisco</span>
                         </li>
-                        <li class="flex items-center gap-2.5 bg-dark-card/60 p-3 rounded-lg border border-gray-800/80 hover:border-red-900/50 transition-colors">
-                            <i class="fa-solid fa-server text-red-500"></i><span>Servidores Proxmox VE</span>
+                        <li class="flex items-center gap-2.5 bg-dark-card/60 p-2.5 sm:p-3 rounded-lg border border-gray-800/80 hover:border-red-900/50 transition-colors">
+                            <i class="fa-solid fa-server text-red-500 flex-shrink-0"></i><span>Servidores Proxmox VE</span>
                         </li>
-                        <li class="flex items-center gap-2.5 bg-dark-card/60 p-3 rounded-lg border border-gray-800/80 hover:border-red-900/50 transition-colors">
-                            <i class="fa-solid fa-database text-red-500"></i><span>PostgreSQL & MariaDB</span>
+                        <li class="flex items-center gap-2.5 bg-dark-card/60 p-2.5 sm:p-3 rounded-lg border border-gray-800/80 hover:border-red-900/50 transition-colors">
+                            <i class="fa-solid fa-database text-red-500 flex-shrink-0"></i><span>PostgreSQL & MariaDB</span>
                         </li>
-                        <li class="flex items-center gap-2.5 bg-dark-card/60 p-3 rounded-lg border border-gray-800/80 hover:border-red-900/50 transition-colors">
-                            <i class="fa-solid fa-terminal text-red-500"></i><span>Linux (Debian/Arch) & Bash</span>
+                        <li class="flex items-center gap-2.5 bg-dark-card/60 p-2.5 sm:p-3 rounded-lg border border-gray-800/80 hover:border-red-900/50 transition-colors">
+                            <i class="fa-solid fa-terminal text-red-500 flex-shrink-0"></i><span>Linux (Debian/Arch) & Bash</span>
                         </li>
-                        <li class="flex items-center gap-2.5 bg-dark-card/60 p-3 rounded-lg border border-gray-800/80 hover:border-red-900/50 transition-colors">
-                            <i class="fa-solid fa-code text-red-500"></i><span>Python, C++, C# & IoT</span>
+                        <li class="flex items-center gap-2.5 bg-dark-card/60 p-2.5 sm:p-3 rounded-lg border border-gray-800/80 hover:border-red-900/50 transition-colors">
+                            <i class="fa-solid fa-code text-red-500 flex-shrink-0"></i><span>Python, C++, C# & IoT</span>
                         </li>
                     </ul>
                 </div>
@@ -207,22 +209,22 @@
     <!-- ═══════════════════════════════════════════════════════════════
          EXPERIENCE
     ════════════════════════════════════════════════════════════════ -->
-    <section id="experience" class="py-20 relative bg-dark-card/20">
-        <div class="container mx-auto px-6 max-w-5xl">
-            <h2 class="text-3xl md:text-5xl font-bold mb-12 text-center reveal">
+    <section id="experience" class="py-16 md:py-20 relative bg-dark-card/20">
+        <div class="container mx-auto px-4 sm:px-6 max-w-5xl">
+            <h2 class="text-3xl md:text-5xl font-bold mb-10 md:mb-12 text-center reveal">
                 <span class="section-number">02. // Experiencia</span>
                 Laboral
             </h2>
 
             <div class="timeline-item reveal">
                 <div class="timeline-dot"></div>
-                <div class="glass-heavy p-8 rounded-2xl border border-gray-800/70 hover:border-red-900/60 transition-all duration-300 ml-4">
-                    <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6 gap-3">
+                <div class="glass-heavy p-4 sm:p-6 md:p-8 rounded-2xl border border-gray-800/70 hover:border-red-900/60 transition-all duration-300 ml-0 sm:ml-4">
+                    <div class="flex flex-col sm:flex-row justify-between items-start sm:items-center mb-6 gap-3">
                         <div>
-                            <h3 class="text-2xl font-bold text-white">Soporte Técnico en Infraestructura Tecnológica</h3>
+                            <h3 class="text-xl sm:text-2xl font-bold text-white">Soporte Técnico en Infraestructura Tecnológica</h3>
                             <p class="text-red-400 font-mono text-base mt-1">Freelance</p>
                         </div>
-                        <div class="px-4 py-1.5 rounded-full bg-red-950/30 border border-red-900/40 text-sm font-mono text-gray-300 flex-shrink-0">
+                        <div class="px-3.5 py-1 sm:px-4 sm:py-1.5 rounded-full bg-red-950/30 border border-red-900/40 text-xs sm:text-sm font-mono text-gray-300 flex-shrink-0">
                             <i class="fa-regular fa-calendar mr-1.5 text-red-500"></i>Feb 2024 — Ene 2025
                         </div>
                     </div>
@@ -259,38 +261,38 @@
     <!-- ═══════════════════════════════════════════════════════════════
          PROJECTS
     ════════════════════════════════════════════════════════════════ -->
-    <section id="proyects" class="py-24 relative">
-        <div class="container mx-auto px-6 max-w-6xl">
+    <section id="proyects" class="py-16 md:py-24 relative">
+        <div class="container mx-auto px-4 sm:px-6 max-w-6xl">
             <h2 class="text-3xl md:text-5xl font-bold mb-4 text-center reveal">
                 <span class="section-number">03. // Proyectos</span>
                 Destacados
             </h2>
-            <p class="text-gray-500 text-center max-w-2xl mx-auto mb-10 text-sm md:text-base reveal font-mono">
+            <p class="text-gray-500 text-center max-w-2xl mx-auto mb-8 md:mb-10 text-sm md:text-base reveal font-mono px-2 sm:px-0">
                 Herramientas de <span class="text-red-400">ciberseguridad ofensiva</span> · Soluciones <span class="text-gray-300">IoT & hardware embebido</span> · Implementaciones con <span class="text-gray-300">IA y visión artificial</span>
             </p>
 
             <!-- Filter buttons -->
-            <div class="flex flex-wrap justify-center gap-3 mb-14 reveal">
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-10 md:mb-14 reveal">
                 <button onclick="filterProjects('all')" data-filter="all"
-                    class="project-btn active px-5 py-2.5 rounded-lg border border-primary bg-primary text-white text-xs font-mono transition-all flex items-center gap-2 shadow-[0_0_15px_rgba(220,38,38,0.4)]">
+                    class="project-btn active px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-lg border border-primary bg-primary text-white text-xs font-mono transition-all flex items-center gap-2 shadow-[0_0_15px_rgba(220,38,38,0.4)]">
                     <i class="fa-solid fa-layer-group"></i> Todos (6)
                 </button>
                 <button onclick="filterProjects('security')" data-filter="security"
-                    class="project-btn px-5 py-2.5 rounded-lg border border-gray-800 bg-black/40 text-gray-400 hover:text-white hover:border-primary transition-all text-xs font-mono flex items-center gap-2">
+                    class="project-btn px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-lg border border-gray-800 bg-black/40 text-gray-400 hover:text-white hover:border-primary transition-all text-xs font-mono flex items-center gap-2">
                     <i class="fa-solid fa-skull-crossbones"></i> Red Team (3)
                 </button>
                 <button onclick="filterProjects('hardware')" data-filter="hardware"
-                    class="project-btn px-5 py-2.5 rounded-lg border border-gray-800 bg-black/40 text-gray-400 hover:text-white hover:border-primary transition-all text-xs font-mono flex items-center gap-2">
+                    class="project-btn px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-lg border border-gray-800 bg-black/40 text-gray-400 hover:text-white hover:border-primary transition-all text-xs font-mono flex items-center gap-2">
                     <i class="fa-solid fa-microchip"></i> IoT & Hardware (3)
                 </button>
                 <button onclick="filterProjects('dev')" data-filter="dev"
-                    class="project-btn px-5 py-2.5 rounded-lg border border-gray-800 bg-black/40 text-gray-400 hover:text-white hover:border-primary transition-all text-xs font-mono flex items-center gap-2">
+                    class="project-btn px-3.5 sm:px-5 py-2 sm:py-2.5 rounded-lg border border-gray-800 bg-black/40 text-gray-400 hover:text-white hover:border-primary transition-all text-xs font-mono flex items-center gap-2">
                     <i class="fa-solid fa-code"></i> Dev & IA (3)
                 </button>
             </div>
 
             <!-- Projects grid -->
-            <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-7 reveal">
+            <div id="projects-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-7 reveal">
 
                 <!-- Project 1: DragonFly -->
                 <article class="glass-heavy rounded-2xl overflow-hidden group flex flex-col justify-between border border-gray-800/80 transition-all duration-300 project-card security relative">
@@ -327,7 +329,7 @@
                         </div>
                     </div>
                     <div class="p-6 pt-0 mt-auto">
-                        <div class="border-t border-gray-800/80 pt-4 flex items-center justify-between">
+                        <div class="border-t border-gray-800/80 pt-4 flex flex-wrap items-center justify-between gap-3">
                             <a href="https://github.com/whoamijas0n/DragonFly" target="_blank" rel="noopener noreferrer"
                                 class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 hover:bg-red-700 text-white border border-white/10 hover:border-red-600 text-xs font-mono font-medium transition-all duration-300 hover:shadow-[0_0_16px_rgba(220,38,38,0.5)]">
                                 <span>Ver Repositorio</span>
@@ -374,7 +376,7 @@
                         </div>
                     </div>
                     <div class="p-6 pt-0 mt-auto">
-                        <div class="border-t border-gray-800/80 pt-4 flex items-center justify-between">
+                        <div class="border-t border-gray-800/80 pt-4 flex flex-wrap items-center justify-between gap-3">
                             <a href="https://github.com/whoamijas0n/Soranin" target="_blank" rel="noopener noreferrer"
                                 class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 hover:bg-blue-600 text-white border border-white/10 hover:border-blue-600 text-xs font-mono font-medium transition-all duration-300 hover:shadow-[0_0_16px_rgba(59,130,246,0.5)]">
                                 <span>Ver Repositorio</span>
@@ -421,7 +423,7 @@
                         </div>
                     </div>
                     <div class="p-6 pt-0 mt-auto">
-                        <div class="border-t border-gray-800/80 pt-4 flex items-center justify-between">
+                        <div class="border-t border-gray-800/80 pt-4 flex flex-wrap items-center justify-between gap-3">
                             <a href="https://github.com/whoamijas0n/rei" target="_blank" rel="noopener noreferrer"
                                 class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 hover:bg-cyan-600 text-white border border-white/10 hover:border-cyan-600 text-xs font-mono font-medium transition-all duration-300 hover:shadow-[0_0_16px_rgba(6,182,212,0.5)]">
                                 <span>Ver Repositorio</span>
@@ -471,7 +473,7 @@
                         </div>
                     </div>
                     <div class="p-6 pt-0 mt-auto">
-                        <div class="border-t border-gray-800/80 pt-4 flex items-center justify-between">
+                        <div class="border-t border-gray-800/80 pt-4 flex flex-wrap items-center justify-between gap-3">
                             <a href="https://github.com/whoamijas0n/ServoPipe.git" target="_blank" rel="noopener noreferrer"
                                 class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 hover:bg-yellow-600 text-white border border-white/10 hover:border-yellow-600 text-xs font-mono font-medium transition-all duration-300 hover:shadow-[0_0_16px_rgba(234,179,8,0.5)]">
                                 <span>Ver Repositorio</span>
@@ -520,7 +522,7 @@
                         </div>
                     </div>
                     <div class="p-6 pt-0 mt-auto">
-                        <div class="border-t border-gray-800/80 pt-4 flex items-center justify-between">
+                        <div class="border-t border-gray-800/80 pt-4 flex flex-wrap items-center justify-between gap-3">
                             <a href="https://github.com/whoamijas0n/fiexpress.git" target="_blank" rel="noopener noreferrer"
                                 class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 hover:bg-orange-600 text-white border border-white/10 hover:border-orange-600 text-xs font-mono font-medium transition-all duration-300 hover:shadow-[0_0_16px_rgba(234,88,12,0.5)]">
                                 <span>Ver Repositorio</span>
@@ -567,7 +569,7 @@
                         </div>
                     </div>
                     <div class="p-6 pt-0 mt-auto">
-                        <div class="border-t border-gray-800/80 pt-4 flex items-center justify-between">
+                        <div class="border-t border-gray-800/80 pt-4 flex flex-wrap items-center justify-between gap-3">
                             <a href="https://github.com/Shadow026/HandTalk.git" target="_blank" rel="noopener noreferrer"
                                 class="inline-flex items-center gap-2 px-4 py-2 rounded-lg bg-white/5 hover:bg-purple-600 text-white border border-white/10 hover:border-purple-600 text-xs font-mono font-medium transition-all duration-300 hover:shadow-[0_0_16px_rgba(168,85,247,0.5)]">
                                 <span>Ver Repositorio</span>
@@ -589,17 +591,17 @@
     <!-- ═══════════════════════════════════════════════════════════════
          SKILLS / ARSENAL TÉCNICO
     ════════════════════════════════════════════════════════════════ -->
-    <section id="skills" class="py-24 relative overflow-hidden bg-dark-card/20">
+    <section id="skills" class="py-16 md:py-24 relative overflow-hidden bg-dark-card/20">
         <div class="absolute right-0 top-1/2 w-64 h-64 bg-red-900/8 rounded-full blur-[90px] pointer-events-none"></div>
 
-        <div class="container mx-auto px-6 max-w-7xl relative z-10">
-            <h2 class="text-3xl md:text-5xl font-bold mb-16 text-center reveal">
+        <div class="container mx-auto px-4 sm:px-6 max-w-7xl relative z-10">
+            <h2 class="text-3xl md:text-5xl font-bold mb-10 md:mb-16 text-center reveal">
                 <span class="section-number">04. // Skills</span>
                 Arsenal Técnico
             </h2>
 
             <!-- Terminal interactiva -->
-            <div class="reveal mb-16 max-w-4xl mx-auto">
+            <div class="reveal mb-12 md:mb-16 max-w-4xl mx-auto">
                 <div class="cyber-terminal">
                     <!-- Topbar -->
                     <div class="terminal-topbar">
@@ -619,11 +621,11 @@
             </div>
 
             <!-- 3D Tilt Cards — Dominios Técnicos -->
-            <div class="grid md:grid-cols-2 gap-7 reveal mb-20">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-5 sm:gap-7 reveal mb-16 md:mb-20">
 
                 <!-- Card 1: Ciberseguridad Defensiva -->
                 <div class="cyber-card cyber-card-blue group h-full" onmousemove="handleTilt(event,this)" onmouseleave="resetTilt(this)">
-                    <div class="cyber-card-inner h-full rounded-2xl border border-gray-800 p-7 md:p-8 relative overflow-hidden bg-dark-card/90">
+                    <div class="cyber-card-inner h-full rounded-2xl border border-gray-800 p-5 sm:p-7 md:p-8 relative overflow-hidden bg-dark-card/90">
                         <div class="absolute top-0 right-0 p-5 opacity-10 group-hover:opacity-80 transition-opacity duration-500">
                             <i class="fa-solid fa-shield-halved text-7xl text-blue-500 cyber-icon"></i>
                         </div>
@@ -657,7 +659,7 @@
 
                 <!-- Card 2: Telecomunicaciones & Redes -->
                 <div class="cyber-card cyber-card-red group h-full" onmousemove="handleTilt(event,this)" onmouseleave="resetTilt(this)">
-                    <div class="cyber-card-inner h-full rounded-2xl border border-gray-800 p-7 md:p-8 relative overflow-hidden bg-dark-card/90">
+                    <div class="cyber-card-inner h-full rounded-2xl border border-gray-800 p-5 sm:p-7 md:p-8 relative overflow-hidden bg-dark-card/90">
                         <div class="absolute top-0 right-0 p-5 opacity-10 group-hover:opacity-80 transition-opacity duration-500">
                             <i class="fa-solid fa-network-wired text-7xl text-red-500 cyber-icon"></i>
                         </div>
@@ -691,7 +693,7 @@
 
                 <!-- Card 3: Proxmox VE -->
                 <div class="cyber-card cyber-card-orange group h-full" onmousemove="handleTilt(event,this)" onmouseleave="resetTilt(this)">
-                    <div class="cyber-card-inner h-full rounded-2xl border border-gray-800 p-7 md:p-8 relative overflow-hidden bg-dark-card/90">
+                    <div class="cyber-card-inner h-full rounded-2xl border border-gray-800 p-5 sm:p-7 md:p-8 relative overflow-hidden bg-dark-card/90">
                         <div class="absolute top-0 right-0 p-5 opacity-10 group-hover:opacity-80 transition-opacity duration-500">
                             <i class="fa-solid fa-server text-7xl text-orange-500 cyber-icon"></i>
                         </div>
@@ -725,7 +727,7 @@
 
                 <!-- Card 4: PostgreSQL & MariaDB -->
                 <div class="cyber-card cyber-card-cyan group h-full" onmousemove="handleTilt(event,this)" onmouseleave="resetTilt(this)">
-                    <div class="cyber-card-inner h-full rounded-2xl border border-gray-800 p-7 md:p-8 relative overflow-hidden bg-dark-card/90">
+                    <div class="cyber-card-inner h-full rounded-2xl border border-gray-800 p-5 sm:p-7 md:p-8 relative overflow-hidden bg-dark-card/90">
                         <div class="absolute top-0 right-0 p-5 opacity-10 group-hover:opacity-80 transition-opacity duration-500">
                             <i class="fa-solid fa-database text-7xl text-cyan-400 cyber-icon"></i>
                         </div>
@@ -759,7 +761,7 @@
 
                 <!-- Card 5: Ciberseguridad Ofensiva -->
                 <div class="cyber-card cyber-card-red group h-full" onmousemove="handleTilt(event,this)" onmouseleave="resetTilt(this)">
-                    <div class="cyber-card-inner h-full rounded-2xl border border-gray-800 p-7 md:p-8 relative overflow-hidden bg-dark-card/90">
+                    <div class="cyber-card-inner h-full rounded-2xl border border-gray-800 p-5 sm:p-7 md:p-8 relative overflow-hidden bg-dark-card/90">
                         <div class="absolute top-0 right-0 p-5 opacity-10 group-hover:opacity-80 transition-opacity duration-500">
                             <i class="fa-solid fa-user-secret text-7xl text-red-500 cyber-icon"></i>
                         </div>
@@ -793,7 +795,7 @@
 
                 <!-- Card 6: Desarrollo & IoT -->
                 <div class="cyber-card cyber-card-blue group h-full" onmousemove="handleTilt(event,this)" onmouseleave="resetTilt(this)">
-                    <div class="cyber-card-inner h-full rounded-2xl border border-gray-800 p-7 md:p-8 relative overflow-hidden bg-dark-card/90">
+                    <div class="cyber-card-inner h-full rounded-2xl border border-gray-800 p-5 sm:p-7 md:p-8 relative overflow-hidden bg-dark-card/90">
                         <div class="absolute top-0 right-0 p-5 opacity-10 group-hover:opacity-80 transition-opacity duration-500">
                             <i class="fa-solid fa-microchip text-7xl text-blue-500 cyber-icon"></i>
                         </div>
@@ -828,12 +830,12 @@
             </div>
 
             <!-- Tech stack carousel -->
-            <div class="w-full relative py-10 border-t border-gray-800/40 reveal">
+            <div class="w-full relative py-8 md:py-10 border-t border-gray-800/40 reveal">
                 <div class="text-center mb-8">
                     <p class="font-mono text-xs text-gray-600 tracking-[0.2em] uppercase">Tecnologías & Herramientas</p>
                 </div>
-                <div class="flex overflow-hidden group gap-16">
-                    <div class="flex shrink-0 animate-infinite-scroll gap-16 items-center justify-around min-w-full">
+                <div class="flex overflow-hidden group gap-8 sm:gap-12 md:gap-16">
+                    <div class="flex shrink-0 animate-infinite-scroll gap-8 sm:gap-12 md:gap-16 items-center justify-around min-w-full">
                         <div class="tech-item flex flex-col items-center gap-2"><i class="devicon-proxmox-plain text-5xl tech-icon text-orange-500"></i><span class="text-xs font-mono text-gray-600 mt-2">Proxmox</span></div>
                         <div class="tech-item flex flex-col items-center gap-2"><i class="devicon-postgresql-plain text-5xl tech-icon text-blue-400"></i><span class="text-xs font-mono text-gray-600 mt-2">PostgreSQL</span></div>
                         <div class="tech-item flex flex-col items-center gap-2"><i class="devicon-mariadb-original text-5xl tech-icon text-cyan-400"></i><span class="text-xs font-mono text-gray-600 mt-2">MariaDB</span></div>
@@ -871,9 +873,9 @@
     <!-- ═══════════════════════════════════════════════════════════════
          CERTIFICATIONS
     ════════════════════════════════════════════════════════════════ -->
-    <section id="certifications" class="py-20 relative">
-        <div class="container mx-auto px-6 max-w-6xl">
-            <div class="text-center max-w-3xl mx-auto mb-16 reveal">
+    <section id="certifications" class="py-16 md:py-20 relative">
+        <div class="container mx-auto px-4 sm:px-6 max-w-6xl">
+            <div class="text-center max-w-3xl mx-auto mb-12 md:mb-16 reveal">
                 <h2 class="text-3xl md:text-5xl font-bold mb-4">
                     <span class="section-number">05. // Certifications</span>
                     Certificaciones & Trayectorias
@@ -887,10 +889,10 @@
             <div class="glass-heavy rounded-2xl border border-gray-800 hover:border-red-900/60 transition-all duration-300 relative overflow-hidden group shadow-2xl mb-10 reveal">
                 <div class="absolute -top-20 -right-20 w-72 h-72 bg-red-900/8 rounded-full blur-[80px] pointer-events-none group-hover:bg-red-900/16 transition-all duration-500"></div>
 
-                <div class="relative z-10 p-6 md:p-8 border-b border-gray-800/80 flex flex-col md:flex-row items-center md:items-start gap-8">
+                <div class="relative z-10 p-5 sm:p-6 md:p-8 border-b border-gray-800/80 flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-8">
                     <div class="relative flex-shrink-0">
                         <a href="https://www.credly.com/badges/a0f29d45-c768-4df7-b4fb-e7815d6d3e98" target="_blank" rel="noopener noreferrer" class="block group/badge">
-                            <div class="relative w-36 h-36 md:w-44 md:h-44 flex items-center justify-center p-2 rounded-2xl bg-black/40 border border-red-900/30 group-hover/badge:border-red-600/50 transition-all">
+                            <div class="relative w-32 h-32 sm:w-36 sm:h-36 md:w-44 md:h-44 flex items-center justify-center p-2 rounded-2xl bg-black/40 border border-red-900/30 group-hover/badge:border-red-600/50 transition-all">
                                 <img src="img/badges/network-technician-career-path.png" alt="Network Technician Career Path" class="w-full h-full object-contain badge-glow-red group-hover/badge:scale-105 transition-transform duration-300">
                             </div>
                             <span class="mt-2 text-center text-xs text-gray-500 flex items-center justify-center gap-1 group-hover/badge:text-red-400 transition-colors font-mono">
@@ -922,14 +924,14 @@
                             </a>
                             <div class="text-xs font-mono text-gray-600 flex items-center gap-2">
                                 <i class="fa-solid fa-fingerprint text-gray-500"></i>
-                                <code class="text-gray-500">a0f29d45-c768-4df7-b4fb-e7815d6d3e98</code>
+                                <code class="text-gray-500 break-all">a0f29d45-c768-4df7-b4fb-e7815d6d3e98</code>
                             </div>
                         </div>
                     </div>
                 </div>
 
                 <!-- Subcourses -->
-                <div class="relative z-10 p-6 md:p-8 bg-black/25">
+                <div class="relative z-10 p-4 sm:p-6 md:p-8 bg-black/25">
                     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6">
                         <h4 class="text-sm font-mono text-gray-400 uppercase tracking-wider flex items-center gap-2">
                             <i class="fa-solid fa-list-check text-red-500"></i> Cursos Oficiales Acreditados (4/4)
@@ -938,7 +940,7 @@
                             <i class="fa-solid fa-check-double"></i> 100% Completado
                         </span>
                     </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
                         <a href="https://www.credly.com/badges/90cabeae-51ac-4fda-9b23-87b4f61bc8b6" target="_blank" rel="noopener noreferrer" class="subcourse-card p-4 rounded-xl bg-dark-panel/60 border border-gray-800 flex flex-col group/item">
                             <div class="flex items-center gap-3 mb-3">
                                 <img src="img/badges/networking-basics.png" alt="Networking Basics" class="w-14 h-14 object-contain flex-shrink-0 group-hover/item:scale-105 transition-transform">
@@ -1003,9 +1005,9 @@
             <div class="glass-heavy rounded-2xl border border-gray-800 hover:border-blue-700/50 transition-all duration-300 relative overflow-hidden group shadow-2xl mb-14 reveal">
                 <div class="absolute -top-20 -right-20 w-72 h-72 bg-blue-900/8 rounded-full blur-[80px] pointer-events-none group-hover:bg-blue-900/16 transition-all duration-500"></div>
 
-                <div class="relative z-10 p-6 md:p-8 border-b border-gray-800/80 flex flex-col md:flex-row items-center md:items-start gap-8">
+                <div class="relative z-10 p-5 sm:p-6 md:p-8 border-b border-gray-800/80 flex flex-col md:flex-row items-center md:items-start gap-6 md:gap-8">
                     <div class="relative flex-shrink-0">
-                        <div class="w-36 h-36 md:w-44 md:h-44 flex items-center justify-center p-2 rounded-2xl bg-black/40 border border-blue-700/20">
+                        <div class="w-32 h-32 sm:w-36 sm:h-36 md:w-44 md:h-44 flex items-center justify-center p-2 rounded-2xl bg-black/40 border border-blue-700/20">
                             <img src="img/badges/junior-cybersecurity-career-path.png" alt="Junior Cybersecurity Analyst" class="w-full h-full object-contain badge-glow-blue group-hover:scale-105 transition-transform duration-300">
                         </div>
                         <span class="mt-2 text-center text-xs text-blue-400 flex items-center justify-center gap-1 font-mono">
@@ -1041,7 +1043,7 @@
                 </div>
 
                 <!-- Modules -->
-                <div class="relative z-10 p-6 md:p-8 bg-black/25">
+                <div class="relative z-10 p-4 sm:p-6 md:p-8 bg-black/25">
                     <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-6">
                         <h4 class="text-sm font-mono text-gray-400 uppercase tracking-wider flex items-center gap-2">
                             <i class="fa-solid fa-shield-halved text-blue-400"></i> Cursos Incluidos & Acreditaciones
@@ -1050,7 +1052,7 @@
                             <i class="fa-solid fa-list-check"></i> 4 Acreditados en Credly
                         </span>
                     </div>
-                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-4">
                         <a href="https://www.credly.com/badges/748178b5-9810-43df-8d54-ac880cc71c0b" target="_blank" rel="noopener noreferrer" class="subcourse-card subcourse-card-blue p-4 rounded-xl bg-dark-panel/60 border border-gray-800 flex flex-col group/item">
                             <div class="flex items-center gap-3 mb-3">
                                 <img src="img/badges/intro-cybersecurity.png" alt="Intro to Cybersecurity" class="w-14 h-14 object-contain flex-shrink-0 group-hover/item:scale-105 transition-transform">
@@ -1099,10 +1101,10 @@
                     </h3>
                     <p class="text-gray-500 text-sm mt-1 font-mono">Acreditaciones prácticas en seguridad, telecomunicaciones, servidores y bases de datos.</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-5">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-5">
 
                     <a href="https://www.credly.com/badge_templates/2aff6d71-ae6f-44cb-a8ec-5349f807d49b" target="_blank" rel="noopener noreferrer"
-                        class="glass-heavy p-6 rounded-xl border border-gray-800 hover:border-red-700/50 transition-all group flex flex-col justify-between hover:-translate-y-1.5 duration-300">
+                        class="glass-heavy p-5 sm:p-6 rounded-xl border border-gray-800 hover:border-red-700/50 transition-all group flex flex-col justify-between hover:-translate-y-1.5 duration-300">
                         <div>
                             <div class="flex items-center justify-between mb-4">
                                 <div class="w-14 h-14 bg-black/40 rounded-xl flex items-center justify-center p-1 border border-red-900/20 group-hover:border-red-600/40 transition-colors">
@@ -1119,7 +1121,7 @@
                         </div>
                     </a>
 
-                    <div class="glass-heavy p-6 rounded-xl border border-gray-800 hover:border-emerald-600/50 transition-all group flex flex-col justify-between hover:-translate-y-1.5 duration-300">
+                    <div class="glass-heavy p-5 sm:p-6 rounded-xl border border-gray-800 hover:border-emerald-600/50 transition-all group flex flex-col justify-between hover:-translate-y-1.5 duration-300">
                         <div>
                             <div class="flex items-center justify-between mb-4">
                                 <div class="w-14 h-14 bg-emerald-500/10 rounded-xl flex items-center justify-center text-emerald-400 group-hover:bg-emerald-500 group-hover:text-white transition-colors border border-emerald-500/20">
@@ -1136,7 +1138,7 @@
                         </div>
                     </div>
 
-                    <div class="glass-heavy p-6 rounded-xl border border-gray-800 hover:border-orange-600/50 transition-all group flex flex-col justify-between hover:-translate-y-1.5 duration-300">
+                    <div class="glass-heavy p-5 sm:p-6 rounded-xl border border-gray-800 hover:border-orange-600/50 transition-all group flex flex-col justify-between hover:-translate-y-1.5 duration-300">
                         <div>
                             <div class="flex items-center justify-between mb-4">
                                 <div class="w-14 h-14 bg-orange-500/10 rounded-xl flex items-center justify-center text-orange-400 group-hover:bg-orange-500 group-hover:text-white transition-colors border border-orange-500/20">
@@ -1153,7 +1155,7 @@
                         </div>
                     </div>
 
-                    <div class="glass-heavy p-6 rounded-xl border border-gray-800 hover:border-cyan-600/50 transition-all group flex flex-col justify-between hover:-translate-y-1.5 duration-300">
+                    <div class="glass-heavy p-5 sm:p-6 rounded-xl border border-gray-800 hover:border-cyan-600/50 transition-all group flex flex-col justify-between hover:-translate-y-1.5 duration-300">
                         <div>
                             <div class="flex items-center justify-between mb-4">
                                 <div class="w-14 h-14 bg-cyan-500/10 rounded-xl flex items-center justify-center text-cyan-400 group-hover:bg-cyan-500 group-hover:text-white transition-colors border border-cyan-500/20">
@@ -1179,11 +1181,11 @@
     <!-- ═══════════════════════════════════════════════════════════════
          AWARDS / RECONOCIMIENTOS
     ════════════════════════════════════════════════════════════════ -->
-    <section id="awards" class="py-24 bg-dark-card/20 relative overflow-hidden">
+    <section id="awards" class="py-16 md:py-24 bg-dark-card/20 relative overflow-hidden">
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-red-900/5 rounded-full blur-[130px] pointer-events-none"></div>
 
-        <div class="container mx-auto px-6 max-w-5xl relative z-10">
-            <div class="text-center mb-12 reveal">
+        <div class="container mx-auto px-4 sm:px-6 max-w-5xl relative z-10">
+            <div class="text-center mb-10 md:mb-12 reveal">
                 <span class="section-number">06. // Awards</span>
                 <h2 class="text-3xl md:text-5xl font-bold tracking-tight">Reconocimientos & Logros</h2>
                 <div class="h-px w-20 bg-gradient-to-r from-red-700 to-transparent mx-auto my-4 rounded-full"></div>
@@ -1193,38 +1195,38 @@
             </div>
 
             <!-- Tab selector -->
-            <div class="grid grid-cols-2 md:grid-cols-4 gap-3 max-w-4xl mx-auto mb-10 reveal">
-                <button onclick="setAward(0)" class="award-tab award-tab-gold active group flex flex-col items-center justify-center p-3.5 rounded-xl border border-yellow-500/30 bg-dark-panel/70 hover:bg-yellow-500/8 transition-all">
-                    <div class="flex items-center gap-2 mb-1">
-                        <i class="fa-solid fa-trophy text-yellow-400 text-base drop-shadow-[0_0_8px_rgba(250,204,21,0.6)]"></i>
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-2 sm:gap-3 max-w-4xl mx-auto mb-8 sm:mb-10 reveal">
+                <button onclick="setAward(0)" class="award-tab award-tab-gold active group flex flex-col items-center justify-center p-2.5 sm:p-3.5 rounded-xl border border-yellow-500/30 bg-dark-panel/70 hover:bg-yellow-500/8 transition-all">
+                    <div class="flex items-center gap-1.5 sm:gap-2 mb-1">
+                        <i class="fa-solid fa-trophy text-yellow-400 text-sm sm:text-base drop-shadow-[0_0_8px_rgba(250,204,21,0.6)]"></i>
                         <span class="font-bold text-xs text-yellow-400">1er Lugar</span>
                     </div>
-                    <span class="text-[11px] text-gray-500 font-mono">FLIA UGB • 2026</span>
-                    <span class="text-[10px] text-gray-600">Dev Software</span>
+                    <span class="text-[10px] sm:text-[11px] text-gray-500 font-mono">FLIA UGB • 2026</span>
+                    <span class="text-[9px] sm:text-[10px] text-gray-600">Dev Software</span>
                 </button>
-                <button onclick="setAward(1)" class="award-tab award-tab-coninfo group flex flex-col items-center justify-center p-3.5 rounded-xl border border-cyan-500/30 bg-dark-panel/70 hover:bg-cyan-500/8 transition-all">
-                    <div class="flex items-center gap-2 mb-1">
-                        <i class="fa-solid fa-award text-cyan-400 text-base drop-shadow-[0_0_8px_rgba(34,211,238,0.6)]"></i>
+                <button onclick="setAward(1)" class="award-tab award-tab-coninfo group flex flex-col items-center justify-center p-2.5 sm:p-3.5 rounded-xl border border-cyan-500/30 bg-dark-panel/70 hover:bg-cyan-500/8 transition-all">
+                    <div class="flex items-center gap-1.5 sm:gap-2 mb-1">
+                        <i class="fa-solid fa-award text-cyan-400 text-sm sm:text-base drop-shadow-[0_0_8px_rgba(34,211,238,0.6)]"></i>
                         <span class="font-bold text-xs text-cyan-400">3er Lugar</span>
                     </div>
-                    <span class="text-[11px] text-gray-500 font-mono">CONINFO • 2026</span>
-                    <span class="text-[10px] text-gray-600">MakeSing</span>
+                    <span class="text-[10px] sm:text-[11px] text-gray-500 font-mono">CONINFO • 2026</span>
+                    <span class="text-[9px] sm:text-[10px] text-gray-600">MakeSing</span>
                 </button>
-                <button onclick="setAward(2)" class="award-tab award-tab-silver group flex flex-col items-center justify-center p-3.5 rounded-xl border border-slate-400/30 bg-dark-panel/70 hover:bg-slate-400/8 transition-all">
-                    <div class="flex items-center gap-2 mb-1">
-                        <i class="fa-solid fa-medal text-slate-300 text-base drop-shadow-[0_0_8px_rgba(226,232,240,0.4)]"></i>
+                <button onclick="setAward(2)" class="award-tab award-tab-silver group flex flex-col items-center justify-center p-2.5 sm:p-3.5 rounded-xl border border-slate-400/30 bg-dark-panel/70 hover:bg-slate-400/8 transition-all">
+                    <div class="flex items-center gap-1.5 sm:gap-2 mb-1">
+                        <i class="fa-solid fa-medal text-slate-300 text-sm sm:text-base drop-shadow-[0_0_8px_rgba(226,232,240,0.4)]"></i>
                         <span class="font-bold text-xs text-slate-300">2do Lugar</span>
                     </div>
-                    <span class="text-[11px] text-gray-500 font-mono">FLIA UGB • 2025</span>
-                    <span class="text-[10px] text-gray-600">Robótica</span>
+                    <span class="text-[10px] sm:text-[11px] text-gray-500 font-mono">FLIA UGB • 2025</span>
+                    <span class="text-[9px] sm:text-[10px] text-gray-600">Robótica</span>
                 </button>
-                <button onclick="setAward(3)" class="award-tab award-tab-bronze group flex flex-col items-center justify-center p-3.5 rounded-xl border border-amber-600/30 bg-dark-panel/70 hover:bg-amber-600/8 transition-all">
-                    <div class="flex items-center gap-2 mb-1">
-                        <i class="fa-solid fa-medal text-amber-500 text-base drop-shadow-[0_0_8px_rgba(249,115,22,0.4)]"></i>
+                <button onclick="setAward(3)" class="award-tab award-tab-bronze group flex flex-col items-center justify-center p-2.5 sm:p-3.5 rounded-xl border border-amber-600/30 bg-dark-panel/70 hover:bg-amber-600/8 transition-all">
+                    <div class="flex items-center gap-1.5 sm:gap-2 mb-1">
+                        <i class="fa-solid fa-medal text-amber-500 text-sm sm:text-base drop-shadow-[0_0_8px_rgba(249,115,22,0.4)]"></i>
                         <span class="font-bold text-xs text-amber-500">3er Lugar</span>
                     </div>
-                    <span class="text-[11px] text-gray-500 font-mono">FLIA UGB • 2025</span>
-                    <span class="text-[10px] text-gray-600">Robótica</span>
+                    <span class="text-[10px] sm:text-[11px] text-gray-500 font-mono">FLIA UGB • 2025</span>
+                    <span class="text-[9px] sm:text-[10px] text-gray-600">Robótica</span>
                 </button>
             </div>
 
@@ -1232,26 +1234,26 @@
             <div id="awards-carousel-container" class="relative w-full max-w-4xl mx-auto">
 
                 <!-- Slide 1 -->
-                <div class="award-slide active flex flex-col items-center gap-8">
-                    <div class="w-full award-frame-gold rounded-2xl p-4 md:p-6 border relative group overflow-hidden">
-                        <div class="relative w-full h-[320px] sm:h-[390px] md:h-[430px] rounded-xl overflow-hidden bg-black/40 flex items-center justify-center border border-yellow-500/20">
+                <div class="award-slide active flex flex-col items-center gap-6 sm:gap-8">
+                    <div class="w-full award-frame-gold rounded-2xl p-3 sm:p-4 md:p-6 border relative group overflow-hidden">
+                        <div class="relative w-full h-[220px] sm:h-[360px] md:h-[430px] rounded-xl overflow-hidden bg-black/40 flex items-center justify-center border border-yellow-500/20">
                             <img src="img/primer.jpg" alt="1er Lugar FLIA 2026" class="w-full h-full object-contain p-2 md:p-4 filter contrast-105 transition-transform duration-500 group-hover:scale-[1.02] cursor-pointer" onclick="openCertificateModal(0)">
                             <button onclick="openCertificateModal(0)" class="absolute bottom-4 px-4 py-2 bg-black/85 hover:bg-yellow-500 hover:text-black text-white text-xs font-mono rounded-full border border-yellow-500/40 backdrop-blur opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center gap-2">
                                 <i class="fa-solid fa-magnifying-glass-plus"></i> Ampliar Diploma
                             </button>
                         </div>
                     </div>
-                    <div class="w-full p-6 md:p-8 rounded-2xl border border-yellow-500/30 bg-gradient-to-r from-dark-panel/90 via-dark-card/80 to-dark-panel/90 backdrop-blur-xl shadow-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-                        <div class="flex items-start gap-4">
-                            <div class="w-14 h-14 rounded-2xl bg-yellow-500/10 border border-yellow-500/40 flex items-center justify-center text-yellow-400 text-2xl flex-shrink-0 shadow-[0_0_20px_rgba(234,179,8,0.3)]"><i class="fa-solid fa-trophy"></i></div>
+                    <div class="w-full p-4 sm:p-6 md:p-8 rounded-2xl border border-yellow-500/30 bg-gradient-to-r from-dark-panel/90 via-dark-card/80 to-dark-panel/90 backdrop-blur-xl shadow-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-4 md:gap-6">
+                        <div class="flex items-start gap-3 sm:gap-4">
+                            <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-yellow-500/10 border border-yellow-500/40 flex items-center justify-center text-yellow-400 text-xl sm:text-2xl flex-shrink-0 shadow-[0_0_20px_rgba(234,179,8,0.3)]"><i class="fa-solid fa-trophy"></i></div>
                             <div class="space-y-2">
-                                <div class="flex flex-wrap items-center gap-2.5">
-                                    <span class="px-3 py-1 rounded-full text-xs font-mono font-bold uppercase bg-yellow-500/15 border border-yellow-500/40 text-yellow-400">🥇 Primer Lugar</span>
-                                    <span class="text-xs font-mono text-gray-500 bg-black/40 px-2.5 py-1 rounded border border-gray-800"><i class="fa-regular fa-calendar text-red-600 mr-1"></i> Junio 2026</span>
-                                    <span class="text-xs font-mono text-gray-500 bg-black/40 px-2.5 py-1 rounded border border-gray-800"><i class="fa-solid fa-location-dot text-red-600 mr-1"></i> Usulután, SV</span>
+                                <div class="flex flex-wrap items-center gap-2 sm:gap-2.5">
+                                    <span class="px-2.5 sm:px-3 py-1 rounded-full text-[11px] sm:text-xs font-mono font-bold uppercase bg-yellow-500/15 border border-yellow-500/40 text-yellow-400">🥇 Primer Lugar</span>
+                                    <span class="text-xs font-mono text-gray-500 bg-black/40 px-2 sm:px-2.5 py-1 rounded border border-gray-800"><i class="fa-regular fa-calendar text-red-600 mr-1"></i> Junio 2026</span>
+                                    <span class="text-xs font-mono text-gray-500 bg-black/40 px-2 sm:px-2.5 py-1 rounded border border-gray-800"><i class="fa-solid fa-location-dot text-red-600 mr-1"></i> Usulután, SV</span>
                                 </div>
-                                <h3 class="text-xl md:text-2xl font-bold text-white">Desarrollo de Software — FLIA UGB</h3>
-                                <p class="text-gray-400 text-sm md:text-base leading-relaxed max-w-2xl">Otorgado por la <span class="text-white font-medium">Universidad Gerardo Barrios</span> en la Feria de Logros Informáticos, reconociendo el primer lugar por diseño, arquitectura y ejecución de un sistema de software de alto impacto.</p>
+                                <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-white">Desarrollo de Software — FLIA UGB</h3>
+                                <p class="text-gray-400 text-xs sm:text-sm md:text-base leading-relaxed max-w-2xl">Otorgado por la <span class="text-white font-medium">Universidad Gerardo Barrios</span> en la Feria de Logros Informáticos, reconociendo el primer lugar por diseño, arquitectura y ejecución de un sistema de software de alto impacto.</p>
                             </div>
                         </div>
                         <div class="flex-shrink-0 w-full md:w-auto">
@@ -1263,26 +1265,26 @@
                 </div>
 
                 <!-- Slide 2 -->
-                <div class="award-slide flex flex-col items-center gap-8">
-                    <div class="w-full award-frame-coninfo rounded-2xl p-4 md:p-6 border relative group overflow-hidden">
-                        <div class="relative w-full h-[320px] sm:h-[390px] md:h-[430px] rounded-xl overflow-hidden bg-black/40 flex items-center justify-center border border-cyan-500/20">
+                <div class="award-slide flex flex-col items-center gap-6 sm:gap-8">
+                    <div class="w-full award-frame-coninfo rounded-2xl p-3 sm:p-4 md:p-6 border relative group overflow-hidden">
+                        <div class="relative w-full h-[220px] sm:h-[360px] md:h-[430px] rounded-xl overflow-hidden bg-black/40 flex items-center justify-center border border-cyan-500/20">
                             <img src="img/coninfo.jpg" alt="3er Lugar CONINFO 2026" class="w-full h-full object-contain p-2 md:p-4 filter contrast-105 transition-transform duration-500 group-hover:scale-[1.02] cursor-pointer" onclick="openCertificateModal(1)">
                             <button onclick="openCertificateModal(1)" class="absolute bottom-4 px-4 py-2 bg-black/85 hover:bg-cyan-500 hover:text-black text-white text-xs font-mono rounded-full border border-cyan-500/40 backdrop-blur opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center gap-2">
                                 <i class="fa-solid fa-magnifying-glass-plus"></i> Ampliar Diploma
                             </button>
                         </div>
                     </div>
-                    <div class="w-full p-6 md:p-8 rounded-2xl border border-cyan-500/30 bg-gradient-to-r from-dark-panel/90 via-dark-card/80 to-dark-panel/90 backdrop-blur-xl shadow-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-                        <div class="flex items-start gap-4">
-                            <div class="w-14 h-14 rounded-2xl bg-cyan-500/10 border border-cyan-500/40 flex items-center justify-center text-cyan-400 text-2xl flex-shrink-0 shadow-[0_0_20px_rgba(6,182,212,0.3)]"><i class="fa-solid fa-award"></i></div>
+                    <div class="w-full p-4 sm:p-6 md:p-8 rounded-2xl border border-cyan-500/30 bg-gradient-to-r from-dark-panel/90 via-dark-card/80 to-dark-panel/90 backdrop-blur-xl shadow-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-4 md:gap-6">
+                        <div class="flex items-start gap-3 sm:gap-4">
+                            <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-cyan-500/10 border border-cyan-500/40 flex items-center justify-center text-cyan-400 text-xl sm:text-2xl flex-shrink-0 shadow-[0_0_20px_rgba(6,182,212,0.3)]"><i class="fa-solid fa-award"></i></div>
                             <div class="space-y-2">
-                                <div class="flex flex-wrap items-center gap-2.5">
-                                    <span class="px-3 py-1 rounded-full text-xs font-mono font-bold uppercase bg-cyan-500/15 border border-cyan-500/40 text-cyan-400">🥉 3er Lugar Nacional • CONINFO 2026</span>
-                                    <span class="text-xs font-mono text-gray-500 bg-black/40 px-2.5 py-1 rounded border border-gray-800"><i class="fa-regular fa-calendar text-red-600 mr-1"></i> Octubre 2026</span>
-                                    <span class="text-xs font-mono text-cyan-400 bg-cyan-500/10 px-2.5 py-1 rounded border border-cyan-500/30 font-semibold">Proyecto «MakeSing»</span>
+                                <div class="flex flex-wrap items-center gap-2 sm:gap-2.5">
+                                    <span class="px-2.5 sm:px-3 py-1 rounded-full text-[11px] sm:text-xs font-mono font-bold uppercase bg-cyan-500/15 border border-cyan-500/40 text-cyan-400">🥉 3er Lugar Nacional • CONINFO 2026</span>
+                                    <span class="text-xs font-mono text-gray-500 bg-black/40 px-2 sm:px-2.5 py-1 rounded border border-gray-800"><i class="fa-regular fa-calendar text-red-600 mr-1"></i> Octubre 2026</span>
+                                    <span class="text-xs font-mono text-cyan-400 bg-cyan-500/10 px-2 sm:px-2.5 py-1 rounded border border-cyan-500/30 font-semibold">Proyecto «MakeSing»</span>
                                 </div>
-                                <h3 class="text-xl md:text-2xl font-bold text-white">Congreso de Informática CONINFO — ASPROC</h3>
-                                <p class="text-gray-400 text-sm md:text-base leading-relaxed max-w-2xl">Otorgado por la <span class="text-white font-medium">Asociación Salvadoreña de Profesionales en Computación (ASPROC)</span>. Distinción nacional con el proyecto <span class="text-white font-semibold">«MakeSing»</span>, representando a la Universidad Gerardo Barrios.</p>
+                                <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-white">Congreso de Informática CONINFO — ASPROC</h3>
+                                <p class="text-gray-400 text-xs sm:text-sm md:text-base leading-relaxed max-w-2xl">Otorgado por la <span class="text-white font-medium">Asociación Salvadoreña de Profesionales en Computación (ASPROC)</span>. Distinción nacional con el proyecto <span class="text-white font-semibold">«MakeSing»</span>, representando a la Universidad Gerardo Barrios.</p>
                             </div>
                         </div>
                         <div class="flex-shrink-0 w-full md:w-auto">
@@ -1294,26 +1296,26 @@
                 </div>
 
                 <!-- Slide 3 -->
-                <div class="award-slide flex flex-col items-center gap-8">
-                    <div class="w-full award-frame-silver rounded-2xl p-4 md:p-6 border relative group overflow-hidden">
-                        <div class="relative w-full h-[320px] sm:h-[390px] md:h-[430px] rounded-xl overflow-hidden bg-black/40 flex items-center justify-center border border-slate-400/20">
+                <div class="award-slide flex flex-col items-center gap-6 sm:gap-8">
+                    <div class="w-full award-frame-silver rounded-2xl p-3 sm:p-4 md:p-6 border relative group overflow-hidden">
+                        <div class="relative w-full h-[220px] sm:h-[360px] md:h-[430px] rounded-xl overflow-hidden bg-black/40 flex items-center justify-center border border-slate-400/20">
                             <img src="img/secon.jpeg" alt="2do Lugar FLIA 2025" class="w-full h-full object-contain p-2 md:p-4 filter contrast-105 transition-transform duration-500 group-hover:scale-[1.02] cursor-pointer" onclick="openCertificateModal(2)">
                             <button onclick="openCertificateModal(2)" class="absolute bottom-4 px-4 py-2 bg-black/85 hover:bg-slate-200 hover:text-black text-white text-xs font-mono rounded-full border border-slate-400/40 backdrop-blur opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center gap-2">
                                 <i class="fa-solid fa-magnifying-glass-plus"></i> Ampliar Diploma
                             </button>
                         </div>
                     </div>
-                    <div class="w-full p-6 md:p-8 rounded-2xl border border-slate-400/30 bg-gradient-to-r from-dark-panel/90 via-dark-card/80 to-dark-panel/90 backdrop-blur-xl shadow-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-                        <div class="flex items-start gap-4">
-                            <div class="w-14 h-14 rounded-2xl bg-slate-400/10 border border-slate-400/40 flex items-center justify-center text-slate-300 text-2xl flex-shrink-0"><i class="fa-solid fa-medal"></i></div>
+                    <div class="w-full p-4 sm:p-6 md:p-8 rounded-2xl border border-slate-400/30 bg-gradient-to-r from-dark-panel/90 via-dark-card/80 to-dark-panel/90 backdrop-blur-xl shadow-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-4 md:gap-6">
+                        <div class="flex items-start gap-3 sm:gap-4">
+                            <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-slate-400/10 border border-slate-400/40 flex items-center justify-center text-slate-300 text-xl sm:text-2xl flex-shrink-0"><i class="fa-solid fa-medal"></i></div>
                             <div class="space-y-2">
-                                <div class="flex flex-wrap items-center gap-2.5">
-                                    <span class="px-3 py-1 rounded-full text-xs font-mono font-bold uppercase bg-slate-400/15 border border-slate-400/40 text-slate-300">🥈 Segundo Lugar</span>
-                                    <span class="text-xs font-mono text-gray-500 bg-black/40 px-2.5 py-1 rounded border border-gray-800"><i class="fa-regular fa-calendar text-red-600 mr-1"></i> Diciembre 2025</span>
-                                    <span class="text-xs font-mono text-gray-500 bg-black/40 px-2.5 py-1 rounded border border-gray-800"><i class="fa-solid fa-microchip text-red-600 mr-1"></i> Hardware & IoT</span>
+                                <div class="flex flex-wrap items-center gap-2 sm:gap-2.5">
+                                    <span class="px-2.5 sm:px-3 py-1 rounded-full text-[11px] sm:text-xs font-mono font-bold uppercase bg-slate-400/15 border border-slate-400/40 text-slate-300">🥈 Segundo Lugar</span>
+                                    <span class="text-xs font-mono text-gray-500 bg-black/40 px-2 sm:px-2.5 py-1 rounded border border-gray-800"><i class="fa-regular fa-calendar text-red-600 mr-1"></i> Diciembre 2025</span>
+                                    <span class="text-xs font-mono text-gray-500 bg-black/40 px-2 sm:px-2.5 py-1 rounded border border-gray-800"><i class="fa-solid fa-microchip text-red-600 mr-1"></i> Hardware & IoT</span>
                                 </div>
-                                <h3 class="text-xl md:text-2xl font-bold text-white">Automatización y Robótica — FLIA UGB</h3>
-                                <p class="text-gray-400 text-sm md:text-base leading-relaxed max-w-2xl">Segundo lugar por la <span class="text-white font-medium">Universidad Gerardo Barrios</span>, reconociendo diseño de circuitos, control por microcontrolador y programación embebida para robótica.</p>
+                                <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-white">Automatización y Robótica — FLIA UGB</h3>
+                                <p class="text-gray-400 text-xs sm:text-sm md:text-base leading-relaxed max-w-2xl">Segundo lugar por la <span class="text-white font-medium">Universidad Gerardo Barrios</span>, reconociendo diseño de circuitos, control por microcontrolador y programación embebida para robótica.</p>
                             </div>
                         </div>
                         <div class="flex-shrink-0 w-full md:w-auto">
@@ -1325,26 +1327,26 @@
                 </div>
 
                 <!-- Slide 4 -->
-                <div class="award-slide flex flex-col items-center gap-8">
-                    <div class="w-full award-frame-bronze rounded-2xl p-4 md:p-6 border relative group overflow-hidden">
-                        <div class="relative w-full h-[320px] sm:h-[390px] md:h-[430px] rounded-xl overflow-hidden bg-black/40 flex items-center justify-center border border-amber-600/20">
+                <div class="award-slide flex flex-col items-center gap-6 sm:gap-8">
+                    <div class="w-full award-frame-bronze rounded-2xl p-3 sm:p-4 md:p-6 border relative group overflow-hidden">
+                        <div class="relative w-full h-[220px] sm:h-[360px] md:h-[430px] rounded-xl overflow-hidden bg-black/40 flex items-center justify-center border border-amber-600/20">
                             <img src="img/tercero.jpeg" alt="3er Lugar FLIA 2025" class="w-full h-full object-contain p-2 md:p-4 filter contrast-105 transition-transform duration-500 group-hover:scale-[1.02] cursor-pointer" onclick="openCertificateModal(3)">
                             <button onclick="openCertificateModal(3)" class="absolute bottom-4 px-4 py-2 bg-black/85 hover:bg-amber-600 text-white text-xs font-mono rounded-full border border-amber-600/40 backdrop-blur opacity-0 group-hover:opacity-100 transition-all duration-300 flex items-center gap-2">
                                 <i class="fa-solid fa-magnifying-glass-plus"></i> Ampliar Diploma
                             </button>
                         </div>
                     </div>
-                    <div class="w-full p-6 md:p-8 rounded-2xl border border-amber-600/30 bg-gradient-to-r from-dark-panel/90 via-dark-card/80 to-dark-panel/90 backdrop-blur-xl shadow-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-6">
-                        <div class="flex items-start gap-4">
-                            <div class="w-14 h-14 rounded-2xl bg-amber-600/10 border border-amber-600/40 flex items-center justify-center text-amber-500 text-2xl flex-shrink-0"><i class="fa-solid fa-medal"></i></div>
+                    <div class="w-full p-4 sm:p-6 md:p-8 rounded-2xl border border-amber-600/30 bg-gradient-to-r from-dark-panel/90 via-dark-card/80 to-dark-panel/90 backdrop-blur-xl shadow-xl flex flex-col md:flex-row items-start md:items-center justify-between gap-4 md:gap-6">
+                        <div class="flex items-start gap-3 sm:gap-4">
+                            <div class="w-12 h-12 sm:w-14 sm:h-14 rounded-2xl bg-amber-600/10 border border-amber-600/40 flex items-center justify-center text-amber-500 text-xl sm:text-2xl flex-shrink-0"><i class="fa-solid fa-medal"></i></div>
                             <div class="space-y-2">
-                                <div class="flex flex-wrap items-center gap-2.5">
-                                    <span class="px-3 py-1 rounded-full text-xs font-mono font-bold uppercase bg-amber-600/15 border border-amber-600/40 text-amber-500">🥉 Tercer Lugar</span>
-                                    <span class="text-xs font-mono text-gray-500 bg-black/40 px-2.5 py-1 rounded border border-gray-800"><i class="fa-regular fa-calendar text-red-600 mr-1"></i> Diciembre 2025</span>
-                                    <span class="text-xs font-mono text-gray-500 bg-black/40 px-2.5 py-1 rounded border border-gray-800"><i class="fa-solid fa-microchip text-red-600 mr-1"></i> Prototipado</span>
+                                <div class="flex flex-wrap items-center gap-2 sm:gap-2.5">
+                                    <span class="px-2.5 sm:px-3 py-1 rounded-full text-[11px] sm:text-xs font-mono font-bold uppercase bg-amber-600/15 border border-amber-600/40 text-amber-500">🥉 Tercer Lugar</span>
+                                    <span class="text-xs font-mono text-gray-500 bg-black/40 px-2 sm:px-2.5 py-1 rounded border border-gray-800"><i class="fa-regular fa-calendar text-red-600 mr-1"></i> Diciembre 2025</span>
+                                    <span class="text-xs font-mono text-gray-500 bg-black/40 px-2 sm:px-2.5 py-1 rounded border border-gray-800"><i class="fa-solid fa-microchip text-red-600 mr-1"></i> Prototipado</span>
                                 </div>
-                                <h3 class="text-xl md:text-2xl font-bold text-white">Automatización y Robótica — FLIA UGB</h3>
-                                <p class="text-gray-400 text-sm md:text-base leading-relaxed max-w-2xl">Tercer lugar en Automatización y Robótica, premiando el diseño y puesta en marcha de prototipos electromecánicos con sensores y lógica de control.</p>
+                                <h3 class="text-lg sm:text-xl md:text-2xl font-bold text-white">Automatización y Robótica — FLIA UGB</h3>
+                                <p class="text-gray-400 text-xs sm:text-sm md:text-base leading-relaxed max-w-2xl">Tercer lugar en Automatización y Robótica, premiando el diseño y puesta en marcha de prototipos electromecánicos con sensores y lógica de control.</p>
                             </div>
                         </div>
                         <div class="flex-shrink-0 w-full md:w-auto">
@@ -1402,47 +1404,47 @@
     <!-- ═══════════════════════════════════════════════════════════════
          EDUCATION
     ════════════════════════════════════════════════════════════════ -->
-    <section id="formacion" class="py-24">
-        <div class="container mx-auto px-6 max-w-4xl">
-            <h2 class="text-3xl md:text-5xl font-bold mb-16 text-center reveal">
+    <section id="formacion" class="py-16 md:py-24">
+        <div class="container mx-auto px-4 sm:px-6 max-w-4xl">
+            <h2 class="text-3xl md:text-5xl font-bold mb-10 md:mb-16 text-center reveal">
                 <span class="section-number">07. // Education</span>
                 Formación Académica
             </h2>
 
-            <div class="space-y-6 reveal">
+            <div class="space-y-4 sm:space-y-6 reveal">
                 <!-- UGB -->
-                <div class="glass-heavy p-7 rounded-2xl flex flex-col sm:flex-row items-center gap-7 border border-gray-800/70 border-l-4 border-l-red-700 hover:border-l-red-500 hover:translate-x-2 transition-all duration-300">
-                    <div class="w-20 h-20 flex-shrink-0 bg-white rounded-xl flex items-center justify-center shadow-[0_0_20px_rgba(255,255,255,0.08)]">
+                <div class="glass-heavy p-5 sm:p-7 rounded-2xl flex flex-col sm:flex-row items-center gap-5 sm:gap-7 border border-gray-800/70 border-l-4 border-l-red-700 hover:border-l-red-500 hover:translate-x-1 sm:hover:translate-x-2 transition-all duration-300">
+                    <div class="w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 bg-white rounded-xl flex items-center justify-center shadow-[0_0_20px_rgba(255,255,255,0.08)]">
                         <img src="img/ugb.webp" alt="UGB" class="w-full h-full object-contain">
                     </div>
                     <div class="text-center sm:text-left flex-grow">
-                        <h3 class="text-xl font-bold text-white">Ingeniería en Sistemas y Redes</h3>
-                        <p class="text-red-400 font-mono text-base mt-0.5">Universidad Gerardo Barrios</p>
-                        <p class="text-gray-500 text-sm font-mono mt-1">2025 — Actualidad</p>
+                        <h3 class="text-lg sm:text-xl font-bold text-white">Ingeniería en Sistemas y Redes</h3>
+                        <p class="text-red-400 font-mono text-sm sm:text-base mt-0.5">Universidad Gerardo Barrios</p>
+                        <p class="text-gray-500 text-xs sm:text-sm font-mono mt-1">2025 — Actualidad</p>
                     </div>
                 </div>
 
                 <!-- Academia Europea -->
-                <div class="glass-heavy p-7 rounded-2xl flex flex-col sm:flex-row items-center gap-7 border border-gray-800/70 border-l-4 border-l-gray-700 hover:border-l-red-700 hover:translate-x-2 transition-all duration-300">
-                    <div class="w-20 h-20 flex-shrink-0 bg-white rounded-xl flex items-center justify-center shadow-[0_0_20px_rgba(255,255,255,0.08)]">
+                <div class="glass-heavy p-5 sm:p-7 rounded-2xl flex flex-col sm:flex-row items-center gap-5 sm:gap-7 border border-gray-800/70 border-l-4 border-l-gray-700 hover:border-l-red-700 hover:translate-x-1 sm:hover:translate-x-2 transition-all duration-300">
+                    <div class="w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 bg-white rounded-xl flex items-center justify-center shadow-[0_0_20px_rgba(255,255,255,0.08)]">
                         <img src="img/academiaeuropea.webp" alt="Academia Europea" class="w-full h-full object-contain">
                     </div>
                     <div class="text-center sm:text-left flex-grow">
-                        <h3 class="text-xl font-bold text-white">Idioma Inglés (Intermedio)</h3>
-                        <p class="text-red-400 font-mono text-base mt-0.5">Academia Europea</p>
-                        <p class="text-gray-500 text-sm font-mono mt-1">2025 — Actualidad</p>
+                        <h3 class="text-lg sm:text-xl font-bold text-white">Idioma Inglés (Intermedio)</h3>
+                        <p class="text-red-400 font-mono text-sm sm:text-base mt-0.5">Academia Europea</p>
+                        <p class="text-gray-500 text-xs sm:text-sm font-mono mt-1">2025 — Actualidad</p>
                     </div>
                 </div>
 
                 <!-- Bachillerato -->
-                <div class="glass-heavy p-7 rounded-2xl flex flex-col sm:flex-row items-center gap-7 border border-gray-800/70 border-l-4 border-l-gray-700 hover:border-l-red-700 hover:translate-x-2 transition-all duration-300">
-                    <div class="w-20 h-20 flex-shrink-0 bg-dark-panel rounded-xl flex items-center justify-center border border-gray-800">
-                        <i class="fa-solid fa-graduation-cap text-3xl text-red-500"></i>
+                <div class="glass-heavy p-5 sm:p-7 rounded-2xl flex flex-col sm:flex-row items-center gap-5 sm:gap-7 border border-gray-800/70 border-l-4 border-l-gray-700 hover:border-l-red-700 hover:translate-x-1 sm:hover:translate-x-2 transition-all duration-300">
+                    <div class="w-16 h-16 sm:w-20 sm:h-20 flex-shrink-0 bg-dark-panel rounded-xl flex items-center justify-center border border-gray-800">
+                        <i class="fa-solid fa-graduation-cap text-2xl sm:text-3xl text-red-500"></i>
                     </div>
                     <div class="text-center sm:text-left flex-grow">
-                        <h3 class="text-xl font-bold text-white">Bachillerato General</h3>
-                        <p class="text-red-400 font-mono text-base mt-0.5">Instituto Nacional de Usulután</p>
-                        <p class="text-gray-500 text-sm font-mono mt-1">2023 — 2024</p>
+                        <h3 class="text-lg sm:text-xl font-bold text-white">Bachillerato General</h3>
+                        <p class="text-red-400 font-mono text-sm sm:text-base mt-0.5">Instituto Nacional de Usulután</p>
+                        <p class="text-gray-500 text-xs sm:text-sm font-mono mt-1">2023 — 2024</p>
                     </div>
                 </div>
             </div>
@@ -1454,20 +1456,20 @@
     <!-- ═══════════════════════════════════════════════════════════════
          FOOTER / CONTACT
     ════════════════════════════════════════════════════════════════ -->
-    <footer id="contacto" class="relative pt-24 pb-28 overflow-hidden">
+    <footer id="contacto" class="relative pt-16 md:pt-24 pb-32 sm:pb-36 overflow-hidden">
         <div class="absolute top-0 left-0 w-full h-px bg-gradient-to-r from-transparent via-red-700 to-transparent opacity-40"></div>
         <div class="absolute top-1/2 left-1/4 w-[300px] h-[300px] bg-red-900/6 rounded-full blur-[100px] pointer-events-none"></div>
 
-        <div class="container mx-auto px-6 max-w-5xl relative z-10">
-            <div class="grid md:grid-cols-2 gap-14 mb-16">
+        <div class="container mx-auto px-4 sm:px-6 max-w-5xl relative z-10">
+            <div class="grid md:grid-cols-2 gap-8 sm:gap-10 md:gap-14 mb-10 md:mb-16">
                 <!-- Info -->
                 <div class="text-center md:text-left">
                     <div class="font-mono text-red-600 text-sm mb-3">// Contacto</div>
-                    <h2 class="text-4xl font-bold mb-5">¿Tienes un proyecto?</h2>
-                    <p class="text-gray-500 mb-8 leading-relaxed">
+                    <h2 class="text-3xl md:text-4xl font-bold mb-4 md:mb-5">¿Tienes un proyecto?</h2>
+                    <p class="text-gray-500 mb-6 sm:mb-8 text-sm sm:text-base leading-relaxed">
                         Siempre abierto a discutir nuevos proyectos, ideas creativas u oportunidades de ciberseguridad.
                     </p>
-                    <div class="mb-8 space-y-3 font-mono text-sm">
+                    <div class="mb-6 sm:mb-8 space-y-3 font-mono text-xs sm:text-sm">
                         <p class="text-gray-500 flex items-center gap-2 justify-center md:justify-start">
                             <i class="fa-solid fa-location-dot text-red-500 w-4"></i>
                             <span>Usulután, El Salvador</span>
@@ -1483,28 +1485,28 @@
                     </div>
                     <div class="flex gap-3 justify-center md:justify-start">
                         <a href="https://github.com/whoamijas0n" target="_blank"
-                            class="w-11 h-11 rounded-lg border border-gray-800 flex items-center justify-center text-gray-500 hover:text-white hover:border-red-700 hover:bg-red-900/30 transition-all">
+                            class="w-10 h-10 sm:w-11 sm:h-11 rounded-lg border border-gray-800 flex items-center justify-center text-gray-500 hover:text-white hover:border-red-700 hover:bg-red-900/30 transition-all">
                             <i class="fa-brands fa-github text-lg"></i>
                         </a>
                         <a href="https://linkedin.com/in/whoamijas0n" target="_blank"
-                            class="w-11 h-11 rounded-lg border border-gray-800 flex items-center justify-center text-gray-500 hover:text-white hover:border-red-700 hover:bg-red-900/30 transition-all">
+                            class="w-10 h-10 sm:w-11 sm:h-11 rounded-lg border border-gray-800 flex items-center justify-center text-gray-500 hover:text-white hover:border-red-700 hover:bg-red-900/30 transition-all">
                             <i class="fa-brands fa-linkedin text-lg"></i>
                         </a>
                         <a href="mailto:jasonadonayv@gmail.com"
-                            class="w-11 h-11 rounded-lg border border-gray-800 flex items-center justify-center text-gray-500 hover:text-white hover:border-red-700 hover:bg-red-900/30 transition-all">
+                            class="w-10 h-10 sm:w-11 sm:h-11 rounded-lg border border-gray-800 flex items-center justify-center text-gray-500 hover:text-white hover:border-red-700 hover:bg-red-900/30 transition-all">
                             <i class="fa-solid fa-envelope text-lg"></i>
                         </a>
                     </div>
                 </div>
 
                 <!-- Form -->
-                <form id="contact-form" action="https://formspree.io/f/mvgwlkvj" method="POST" class="cyber-panel p-7 rounded-2xl">
-                    <div class="font-mono text-xs text-red-600 mb-4">// Enviar mensaje</div>
-                    <h3 class="text-lg font-bold mb-5 text-white">Envíame un mensaje</h3>
-                    <div class="space-y-4">
-                        <input type="text" name="name" required class="cyber-input" placeholder="Nombre">
-                        <input type="email" name="_replyto" required class="cyber-input" placeholder="Email">
-                        <textarea name="message" rows="4" required class="cyber-input resize-none" placeholder="Mensaje"></textarea>
+                <form id="contact-form" action="https://formspree.io/f/mvgwlkvj" method="POST" class="cyber-panel p-5 sm:p-7 rounded-2xl">
+                    <div class="font-mono text-xs text-red-600 mb-3 sm:mb-4">// Enviar mensaje</div>
+                    <h3 class="text-base sm:text-lg font-bold mb-4 sm:mb-5 text-white">Envíame un mensaje</h3>
+                    <div class="space-y-3.5 sm:space-y-4">
+                        <input type="text" name="name" required class="cyber-input text-sm" placeholder="Nombre">
+                        <input type="email" name="_replyto" required class="cyber-input text-sm" placeholder="Email">
+                        <textarea name="message" rows="4" required class="cyber-input resize-none text-sm" placeholder="Mensaje"></textarea>
                         <button type="submit" class="w-full py-3 bg-gradient-to-r from-red-800 to-red-600 rounded-lg font-bold text-white hover:from-red-700 hover:to-red-500 transition-all shadow-[0_0_25px_rgba(220,38,38,0.3)] hover:shadow-[0_0_35px_rgba(220,38,38,0.5)] font-mono text-sm tracking-wide">
                             <i class="fa-solid fa-paper-plane mr-2"></i>Enviar Mensaje
                         </button>
@@ -1525,49 +1527,40 @@
     <!-- ═══════════════════════════════════════════════════════════════
          FLOATING BOTTOM NAVBAR
     ════════════════════════════════════════════════════════════════ -->
-    <nav class="fixed bottom-6 left-1/2 transform -translate-x-1/2 z-50">
-        <div class="glass-heavy rounded-full px-2 py-2 flex items-center gap-1 shadow-[0_10px_50px_rgba(0,0,0,0.6),0_0_30px_rgba(220,38,38,0.08)] border border-gray-800/70 backdrop-blur-xl scale-90 md:scale-100">
-
-            <a href="#home" id="nav-home" class="nav-item group relative p-3 rounded-full hover:bg-red-950/40 transition-all text-gray-500 hover:text-white">
-                <i class="fa-solid fa-house text-xl"></i>
-                <span class="nav-tooltip absolute -top-10 left-1/2 -translate-x-1/2 bg-black border border-gray-800 text-white text-xs px-2.5 py-1 rounded opacity-0 transition-all duration-300 pointer-events-none whitespace-nowrap">Inicio</span>
+    <nav class="fixed z-50" aria-label="Navegación principal">
+        <div class="glass-heavy rounded-full">
+            <a href="#home" id="nav-home" class="nav-item group" aria-label="Inicio">
+                <i class="fa-solid fa-house"></i>
+                <span class="nav-tooltip">Inicio</span>
             </a>
-
-            <a href="#about" id="nav-about" class="nav-item group relative p-3 rounded-full hover:bg-red-950/40 transition-all text-gray-500 hover:text-white">
-                <i class="fa-solid fa-user text-xl"></i>
-                <span class="nav-tooltip absolute -top-10 left-1/2 -translate-x-1/2 bg-black border border-gray-800 text-white text-xs px-2.5 py-1 rounded opacity-0 transition-all duration-300 pointer-events-none whitespace-nowrap">Sobre Mí</span>
+            <a href="#about" id="nav-about" class="nav-item group" aria-label="Sobre Mí">
+                <i class="fa-solid fa-user"></i>
+                <span class="nav-tooltip">Sobre Mí</span>
             </a>
-
-            <a href="#experience" id="nav-exp" class="nav-item group relative p-3 rounded-full hover:bg-red-950/40 transition-all text-gray-500 hover:text-white">
-                <i class="fa-solid fa-briefcase text-xl"></i>
-                <span class="nav-tooltip absolute -top-10 left-1/2 -translate-x-1/2 bg-black border border-gray-800 text-white text-xs px-2.5 py-1 rounded opacity-0 transition-all duration-300 pointer-events-none whitespace-nowrap">Experiencia</span>
+            <a href="#experience" id="nav-exp" class="nav-item group" aria-label="Experiencia">
+                <i class="fa-solid fa-briefcase"></i>
+                <span class="nav-tooltip">Experiencia</span>
             </a>
-
-            <a href="#proyects" id="nav-proj" class="nav-item group relative p-3 rounded-full hover:bg-red-950/40 transition-all text-gray-500 hover:text-white">
-                <i class="fa-solid fa-code-branch text-xl"></i>
-                <span class="nav-tooltip absolute -top-10 left-1/2 -translate-x-1/2 bg-black border border-gray-800 text-white text-xs px-2.5 py-1 rounded opacity-0 transition-all duration-300 pointer-events-none whitespace-nowrap">Proyectos</span>
+            <a href="#proyects" id="nav-proj" class="nav-item group" aria-label="Proyectos">
+                <i class="fa-solid fa-code-branch"></i>
+                <span class="nav-tooltip">Proyectos</span>
             </a>
-
-            <a href="#skills" id="nav-skills" class="nav-item group relative p-3 rounded-full hover:bg-red-950/40 transition-all text-gray-500 hover:text-white">
-                <i class="fa-solid fa-terminal text-xl"></i>
-                <span class="nav-tooltip absolute -top-10 left-1/2 -translate-x-1/2 bg-black border border-gray-800 text-white text-xs px-2.5 py-1 rounded opacity-0 transition-all duration-300 pointer-events-none whitespace-nowrap">Skills</span>
+            <a href="#skills" id="nav-skills" class="nav-item group" aria-label="Skills">
+                <i class="fa-solid fa-terminal"></i>
+                <span class="nav-tooltip">Skills</span>
             </a>
-
-            <a href="#certifications" id="nav-cert" class="nav-item group relative p-3 rounded-full hover:bg-red-950/40 transition-all text-gray-500 hover:text-white">
-                <i class="fa-solid fa-certificate text-xl"></i>
-                <span class="nav-tooltip absolute -top-10 left-1/2 -translate-x-1/2 bg-black border border-gray-800 text-white text-xs px-2.5 py-1 rounded opacity-0 transition-all duration-300 pointer-events-none whitespace-nowrap">Certif.</span>
+            <a href="#certifications" id="nav-cert" class="nav-item group" aria-label="Certificaciones">
+                <i class="fa-solid fa-certificate"></i>
+                <span class="nav-tooltip">Certif.</span>
             </a>
-
-            <a href="#awards" id="nav-awards" class="nav-item group relative p-3 rounded-full hover:bg-red-950/40 transition-all text-gray-500 hover:text-white">
-                <i class="fa-solid fa-medal text-xl"></i>
-                <span class="nav-tooltip absolute -top-10 left-1/2 -translate-x-1/2 bg-black border border-gray-800 text-white text-xs px-2.5 py-1 rounded opacity-0 transition-all duration-300 pointer-events-none whitespace-nowrap">Logros</span>
+            <a href="#awards" id="nav-awards" class="nav-item group" aria-label="Logros y Reconocimientos">
+                <i class="fa-solid fa-medal"></i>
+                <span class="nav-tooltip">Logros</span>
             </a>
-
-            <div class="w-px h-6 bg-gray-800 mx-1"></div>
-
-            <a href="#contacto" id="nav-contact" class="nav-item group relative p-3 rounded-full bg-red-900/20 border border-red-900/40 text-red-500 hover:bg-red-700 hover:text-white hover:border-red-600 transition-all shadow-[0_0_12px_rgba(220,38,38,0.2)] hover:shadow-[0_0_20px_rgba(220,38,38,0.4)]">
-                <i class="fa-solid fa-paper-plane text-xl"></i>
-                <span class="nav-tooltip absolute -top-10 left-1/2 -translate-x-1/2 bg-black border border-gray-800 text-white text-xs px-2.5 py-1 rounded opacity-0 transition-all duration-300 pointer-events-none whitespace-nowrap">Contacto</span>
+            <div class="nav-divider"></div>
+            <a href="#contacto" id="nav-contact" class="nav-item group" aria-label="Contacto">
+                <i class="fa-solid fa-paper-plane"></i>
+                <span class="nav-tooltip">Contacto</span>
             </a>
         </div>
     </nav>

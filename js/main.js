@@ -12,36 +12,40 @@ const trailCont  = document.getElementById('cursor-trail');
 let mx = 0, my = 0, cx = 0, cy = 0;
 const LERP = 0.15;
 
-document.addEventListener('mousemove', e => {
-    mx = e.clientX; my = e.clientY;
+const isFinePointer = window.matchMedia('(pointer: fine)').matches;
 
-    // Trail dot
-    if (trailCont) {
-        const dot = document.createElement('div');
-        dot.className = 'trail-dot';
-        dot.style.left = mx + 'px';
-        dot.style.top  = my + 'px';
-        trailCont.appendChild(dot);
-        setTimeout(() => dot.remove(), 600);
+if (isFinePointer) {
+    document.addEventListener('mousemove', e => {
+        mx = e.clientX; my = e.clientY;
+
+        // Trail dot
+        if (trailCont) {
+            const dot = document.createElement('div');
+            dot.className = 'trail-dot';
+            dot.style.left = mx + 'px';
+            dot.style.top  = my + 'px';
+            trailCont.appendChild(dot);
+            setTimeout(() => dot.remove(), 600);
+        }
+    });
+
+    // Hover effect on interactive elements
+    document.querySelectorAll('a, button, [role="button"], .cyber-card').forEach(el => {
+        el.addEventListener('mouseenter', () => cursor && cursor.classList.add('hovered'));
+        el.addEventListener('mouseleave', () => cursor && cursor.classList.remove('hovered'));
+    });
+
+    function animateCursor() {
+        if (cursor) {
+            cx += (mx - cx) * LERP;
+            cy += (my - cy) * LERP;
+            cursor.style.left = cx + 'px';
+            cursor.style.top  = cy + 'px';
+        }
+        requestAnimationFrame(animateCursor);
     }
-});
-
-// Hover effect on interactive elements
-document.querySelectorAll('a, button, [role="button"], .cyber-card').forEach(el => {
-    el.addEventListener('mouseenter', () => cursor && cursor.classList.add('hovered'));
-    el.addEventListener('mouseleave', () => cursor && cursor.classList.remove('hovered'));
-});
-
-function animateCursor() {
-    if (cursor) {
-        cx += (mx - cx) * LERP;
-        cy += (my - cy) * LERP;
-        cursor.style.left = cx + 'px';
-        cursor.style.top  = cy + 'px';
-    }
-    requestAnimationFrame(animateCursor);
+    animateCursor();
 }
-animateCursor();
 
 // ═══════════════════════════════════════════════════════════════
 // 2. CIRCUIT PCB CANVAS BACKGROUND
@@ -50,12 +54,19 @@ const canvas = document.getElementById('canvas-bg');
 if (canvas) {
     const ctx = canvas.getContext('2d');
 
+    let lastCanvasWidth = window.innerWidth;
     function resize() {
         canvas.width  = window.innerWidth;
         canvas.height = window.innerHeight;
     }
     resize();
-    window.addEventListener('resize', () => { resize(); initPCB(); });
+    window.addEventListener('resize', () => {
+        if (window.innerWidth !== lastCanvasWidth) {
+            lastCanvasWidth = window.innerWidth;
+            resize();
+            initPCB();
+        }
+    });
 
     const RED  = 'rgba(220,38,38,';
     const REDF = '#dc2626';
@@ -429,14 +440,20 @@ function closeCertificateModal() {
     }
 }
 
-// Touch swipe
+// Touch swipe (distinguishes horizontal swipe from vertical page scroll)
 const carousel = document.getElementById('awards-carousel-container');
 if (carousel) {
-    let tStart = 0;
-    carousel.addEventListener('touchstart', e => tStart = e.changedTouches[0].screenX, { passive: true });
-    carousel.addEventListener('touchend',   e => {
-        const diff = e.changedTouches[0].screenX - tStart;
-        if (Math.abs(diff) > 45) changeAward(diff < 0 ? 1 : -1);
+    let tStartX = 0, tStartY = 0;
+    carousel.addEventListener('touchstart', e => {
+        tStartX = e.changedTouches[0].screenX;
+        tStartY = e.changedTouches[0].screenY;
+    }, { passive: true });
+    carousel.addEventListener('touchend', e => {
+        const diffX = e.changedTouches[0].screenX - tStartX;
+        const diffY = e.changedTouches[0].screenY - tStartY;
+        if (Math.abs(diffX) > 45 && Math.abs(diffX) > Math.abs(diffY) * 1.4) {
+            changeAward(diffX < 0 ? 1 : -1);
+        }
     }, { passive: true });
 }
 
@@ -471,19 +488,35 @@ if (form) {
 // ═══════════════════════════════════════════════════════════════
 // 10. ACTIVE NAV LINK
 // ═══════════════════════════════════════════════════════════════
-const sections = document.querySelectorAll('section');
+const sections = document.querySelectorAll('section[id], footer[id]');
 const navLinks = document.querySelectorAll('.nav-item');
 
-window.addEventListener('scroll', () => {
+function updateActiveNav() {
     let current = '';
+    const scrollPos = window.pageYOffset || document.documentElement.scrollTop;
+
     sections.forEach(sec => {
-        if (pageYOffset >= sec.offsetTop - sec.clientHeight / 3) current = sec.id;
+        const top = sec.offsetTop;
+        const height = sec.offsetHeight;
+        if (scrollPos >= top - height / 3) {
+            current = sec.id;
+        }
     });
+
+    if ((window.innerHeight + Math.round(scrollPos)) >= document.documentElement.scrollHeight - 60) {
+        current = 'contacto';
+    }
+
     navLinks.forEach(link => {
-        link.classList.remove('text-white','bg-white/10','text-primary');
-        if (link.getAttribute('href')?.includes(current)) link.classList.add('text-white','bg-white/10');
+        link.classList.remove('text-white', 'bg-white/10', 'text-primary');
+        if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('text-white', 'bg-white/10');
+        }
     });
-}, { passive: true });
+}
+
+window.addEventListener('scroll', updateActiveNav, { passive: true });
+updateActiveNav();
 
 // ═══════════════════════════════════════════════════════════════
 // 11. SKILL PROGRESS BARS (animate on scroll)
